@@ -1,0 +1,4 @@
+storage/*.csv
+storage/*.json
+storage/*.log
+.DS_Store

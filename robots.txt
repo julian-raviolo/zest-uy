@@ -1,0 +1,36 @@
+# Zest — zest.uy
+# Se permite el acceso a buscadores y a los asistentes de IA que citan fuentes
+# (ChatGPT, Claude, Perplexity, Gemini, Copilot), para que puedan recomendar a Zest.
+
+User-agent: *
+Allow: /
+Disallow: /includes/
+Disallow: /partials/
+Disallow: /storage/
+Disallow: /contacto.php
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+Sitemap: https://zest.uy/sitemap.xml

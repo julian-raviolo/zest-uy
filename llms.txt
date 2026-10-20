@@ -1,0 +1,27 @@
+# Zest
+
+> Zest (zest.uy) es una agencia de marketing digital 360 en Uruguay. Un mismo equipo planifica, crea y mide publicidad en Google y Meta, redes sociales, branding, sitios web y apps, procesos de venta con CRM, automatizaciones con inteligencia artificial y consultoría de marketing digital.
+
+Zest trabaja con un solo plan y un solo reporte: el cliente habla con una persona que coordina todos los servicios. Los servicios se pueden contratar por separado o juntos. El primer paso es una reunión de diagnóstico sin compromiso; después se envía una propuesta con el costo de cada servicio. La inversión en anuncios se paga aparte, directo a Google o Meta.
+
+## Servicios
+
+- [Google Ads y Meta Ads](https://zest.uy/#servicios): campañas en Google, Instagram y Facebook para generar consultas y ventas, con ajustes semanales.
+- [Gestión de redes sociales](https://zest.uy/#servicios): plan de contenidos, diseño, video y comunidad en Instagram, TikTok, Facebook y LinkedIn.
+- [Branding y diseño de marca](https://zest.uy/#servicios): logo, colores, tipografías y manual de marca.
+- [Diseño web y apps](https://zest.uy/#servicios): sitios rápidos pensados para el celular y para Google, tiendas online y apps a medida.
+- [Estrategia de ventas y CRM](https://zest.uy/#servicios): embudo de ventas, CRM, respuestas por WhatsApp y guiones para el equipo.
+- [Consultoría de marketing digital](https://zest.uy/#servicios): diagnóstico y hoja de ruta con prioridades, plazos y seguimiento mensual.
+- [Automatizaciones con IA](https://zest.uy/#servicios): chatbots con IA para WhatsApp e Instagram, seguimientos automáticos y flujos conectados con el CRM.
+
+## Cómo trabaja
+
+1. Escuchamos: reunión de diagnóstico sobre el negocio, los clientes y lo que ya se probó.
+2. Planeamos: hoja de ruta con objetivos, canales, presupuesto y fechas.
+3. Hacemos: marca, web, contenido y campañas a cargo del mismo equipo.
+4. Medimos: reporte mensual con resultados y próximos pasos.
+
+## Contacto
+
+- [Pedir un diagnóstico](https://zest.uy/#contacto)
+- [Preguntas frecuentes](https://zest.uy/#preguntas)
