@@ -433,9 +433,6 @@ html:not(.js) .art .a-draw { stroke-dashoffset: 0; }
 .cta__intro { display: flex; flex-direction: column; gap: 14px; }
 .cta__title { font-family: var(--f-display); font-stretch: 110%; font-weight: 700; font-size: clamp(32px, 8.5vw, 60px); line-height: 1.02; letter-spacing: -.035em; color: var(--ink); }
 .cta__lead { font-size: 17px; max-width: 38ch; }
-.cta__links { display: grid; gap: 10px; margin-top: 6px; }
-.cta__links a { display: inline-flex; align-items: center; gap: 12px; color: var(--ink); font-weight: 500; }
-.cta__ico { width: 22px; height: 22px; color: var(--orange-dark); flex: none; }
 .cta__form { display: flex; flex-direction: column; gap: 14px; }
 
 .notice { padding: 14px 16px; border-radius: 12px; font-weight: 600; }
@@ -474,6 +471,8 @@ html:not(.js) .art .a-draw { stroke-dashoffset: 0; }
 .field__input:focus { outline: none; box-shadow: inset 0 0 0 2px var(--orange), 0 0 0 4px rgba(255, 91, 46, .16); }
 .cta__note { font-size: 13px; color: #4A4842; text-align: center; }
 
+/* Celular: la última opción (Automatizaciones con IA) queda sola en su fila, así que ocupa el ancho completo */
+@media (max-width: 699px) { .pick:last-child { grid-column: 1 / -1; } }
 @media (min-width: 700px) { .picks { grid-template-columns: repeat(3, minmax(0, 1fr)); } .fields { grid-template-columns: 1fr 1fr; } }
 @media (min-width: 900px) {
   .cta { grid-template-columns: 5fr 7fr; gap: 56px; padding: 56px; }
@@ -481,7 +480,6 @@ html:not(.js) .art .a-draw { stroke-dashoffset: 0; }
 }
 @media (hover: hover) and (pointer: fine) {
   .pick:hover input:not(:checked) + .pick__box { box-shadow: inset 0 0 0 1px var(--ink); }
-  .cta__links a:hover { color: var(--orange-dark); }
 }
 
 /* --------------------------------------------------------------------------
@@ -494,6 +492,8 @@ html:not(.js) .art .a-draw { stroke-dashoffset: 0; }
   color: transparent; -webkit-text-stroke: 1px rgba(242, 239, 230, .45);
   overflow-wrap: anywhere; transition: color .4s, -webkit-text-stroke-color .4s;
 }
+.footer__ig { display: inline-flex; align-items: center; gap: 10px; margin-top: 20px; font-size: 17px; font-weight: 500; color: var(--beige); transition: color .2s; }
+.footer__ig-ico { width: 22px; height: 22px; flex: none; color: var(--orange); }
 .footer__row { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 28px; margin-top: 40px; padding-top: 24px; box-shadow: inset 0 1px 0 var(--line); }
 .footer__claim { font-size: 15px; margin-right: auto; }
 .footer__nav { display: flex; flex-wrap: wrap; gap: 6px 20px; font-size: 15px; }
@@ -501,6 +501,7 @@ html:not(.js) .art .a-draw { stroke-dashoffset: 0; }
 @media (hover: hover) and (pointer: fine) {
   .footer__mail:hover { color: var(--orange); -webkit-text-stroke-color: var(--orange); }
   .footer__nav a:hover { color: var(--white); }
+  .footer__ig:hover { color: var(--orange); }
 }
 
 /* --------------------------------------------------------------------------

@@ -1,6 +1,7 @@
 <footer class="footer">
   <div class="wrap">
     <a class="footer__mail" href="mailto:<?= e($email) ?>"><?= e($email) ?></a>
+    <a class="footer__ig" href="https://instagram.com/<?= e($contact['instagram']) ?>" target="_blank" rel="noopener"><?= ico('instagram', 'footer__ig-ico') ?>@<?= e($contact['instagram']) ?></a>
     <div class="footer__row">
       <a class="brand" href="#inicio" aria-label="Zest, inicio">
         <?= zest_mark('#FF5B2E', '#F2EFE6', 'brand__mark', '') ?>
