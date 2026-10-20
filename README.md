@@ -15,7 +15,7 @@ Sitio de una sola página en PHP para zest.uy: fondo negro con detalles en Manda
 
 Editá **`includes/config.php`**:
 
-1. `contact`: email (separado en usuario y dominio) e Instagram.
+1. `contact`: email (separado en usuario y dominio) e Instagram (hoy: hola@zest.uy y @zest_uy).
 2. `mail.to`: la casilla que recibe los mensajes. `mail.from`: una casilla del mismo dominio del hosting.
 3. `services` y `steps`: textos de cada servicio y de cada paso.
 4. **Ilustraciones:** cada servicio tiene un dibujo propio en los colores de marca (`includes/illustrations.php`): un anuncio en el buscador, un perfil de redes, la construcción de una marca, un sitio en compu y celular, un embudo de ventas y una hoja de ruta. Se animan al aparecer. Cuando tengas trabajos reales, conviene sumar capturas o fotos de esos proyectos.

@@ -16,20 +16,18 @@ return [
         'updated'     => '2026-10-19',                  // fecha de la última actualización del contenido
     ],
 
-    // Datos de contacto. Completar antes de publicar.
+    // Datos de contacto
     'contact' => [
-        'email_user'     => 'hola',                     // [completar] parte antes de la @
-        'email_domain'   => 'zest.uy',                  // [completar] parte después de la @
-        'whatsapp'       => '59899000000',              // [completar] con código de país, sin + ni espacios
-        'whatsapp_label' => '+598 99 000 000',          // [completar] como se muestra en pantalla
-        'instagram'      => 'zest_uy',                  // [completar] usuario sin @
+        'email_user'     => 'hola',                     // parte antes de la @
+        'email_domain'   => 'zest.uy',                  // parte después de la @
+        'instagram'      => 'zest_uy',                  // usuario sin @
         'linkedin'       => '',                         // opcional: URL completa de la página de empresa
         'city'           => 'Uruguay',
     ],
 
     // Envío del formulario
     'mail' => [
-        'to'        => 'hola@zest.uy',                  // [completar] destino de los mensajes
+        'to'        => 'hola@zest.uy',                  // destino de los mensajes
         'from'      => 'web@zest.uy',                   // casilla del mismo dominio del hosting
         'subject'   => 'Pedido de diagnóstico desde zest.uy',
         'save_copy' => true,                            // copia en storage/mensajes.csv por si el mail falla

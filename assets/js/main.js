@@ -72,12 +72,10 @@
     select(list[0], false, false);
   }
 
-  /* Armá tu equipo: resumen, mensaje de WhatsApp y "Quiero este servicio" */
+  /* Armá tu equipo: resumen y "Quiero este servicio" */
   const form = document.querySelector('[data-team]');
   if (form) {
     const summary = form.querySelector('[data-team-summary]');
-    const wa = document.querySelector('[data-wa-link]');
-    const base = form.dataset.wa;
     const boxes = [...form.querySelectorAll('input[name="servicios[]"]')];
     const initial = summary.textContent;
 
@@ -92,8 +90,6 @@
         strong.textContent = picked.length === 1 ? 'Un servicio' : `${picked.length} servicios`;
         summary.append(strong, `: ${list}. Los coordina una sola persona.`);
       }
-      const text = picked.length ? `Hola Zest, me interesa: ${picked.join(', ')}.` : 'Hola Zest, quiero pedir un diagnóstico para mi negocio.';
-      if (wa && base) wa.href = `${base}?text=${encodeURIComponent(text)}`;
     };
     boxes.forEach((b) => b.addEventListener('change', update));
     update();

@@ -55,7 +55,6 @@ function ico(string $name, string $class = 'ico'): string
             <circle cx="16" cy="22" r="1.8" class="fill"/>',
         'arrow' => '<path d="M6 16h20"/><path d="M19 9l7 7-7 7"/>',
         'check' => '<path d="M7 16.5l6 6L25 10"/>',
-        'whatsapp' => '<path d="M27 15.5A11 11 0 0 1 10.6 25L5 27l2-5.4A11 11 0 1 1 27 15.5z"/><path d="M12 11.5c0 4.7 3.8 8.5 8.5 8.5l1.3-2.1-2.8-1.3-1.3 1.2a5.3 5.3 0 0 1-2.9-2.9l1.2-1.3-1.3-2.8z"/>',
         'mail' => '<rect x="4" y="7" width="24" height="18" rx="2"/><path d="M5 8l11 9 11-9"/>',
         'instagram' => '<rect x="5" y="5" width="22" height="22" rx="6"/><circle cx="16" cy="16" r="5"/><path d="M22.5 9.5h.01"/>',
     ];
