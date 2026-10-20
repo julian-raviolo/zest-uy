@@ -54,13 +54,14 @@ if ($nombre === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
 }
 
 // 5. Copia de respaldo (CSV fuera del alcance público, ver storage/.htaccess)
+$saved = false;
 if ($config['mail']['save_copy']) {
     $dir = __DIR__ . '/storage';
     if (is_dir($dir) || @mkdir($dir, 0750, true)) {
         $neutralize = static fn (string $v): string => preg_match('/^[=+\-@]/', $v) ? "'" . $v : $v;
         $fh = @fopen($dir . '/mensajes.csv', 'ab');
         if ($fh) {
-            fputcsv($fh, array_map($neutralize, [date('c'), $nombre, $email, $servicio]), ',', '"', '\\');
+            $saved = fputcsv($fh, array_map($neutralize, [date('c'), $nombre, $email, $servicio]), ',', '"', '\\') !== false;
             fclose($fh);
         }
     }
@@ -76,13 +77,14 @@ $headers = [
     'From'         => 'Zest Web <' . $config['mail']['from'] . '>',
     'Reply-To'     => $email,
     'Content-Type' => 'text/plain; charset=UTF-8',
-    'X-Mailer'     => 'PHP/' . PHP_VERSION,
 ];
 
 $subject = '=?UTF-8?B?' . base64_encode($config['mail']['subject'] . ' · ' . $nombre) . '?=';
-$ok = @mail($config['mail']['to'], $subject, $body, $headers);
+// -f fija el remitente del sobre: sin él muchos hostings (Hostinger incluido) marcan el mail como spam
+$ok = @mail($config['mail']['to'], $subject, $body, $headers, '-f' . $config['mail']['from']);
 
 $_SESSION['last_sent'] = time();
 unset($_SESSION['csrf']); // un token por envío
 
-back($ok || $config['mail']['save_copy'] ? 'ok' : 'fail');
+// Si el mail falla pero quedó la copia en el CSV, el mensaje no se pierde
+back($ok || $saved ? 'ok' : 'fail');

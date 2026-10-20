@@ -41,8 +41,19 @@ Cada vez que cambies textos, actualizá `site.updated` en `config.php` y `lastmo
 
 ## Subir al hosting
 
-PHP 8.1 o superior, sin base de datos. Subí todo a `public_html` (o la raíz del dominio).
-Las carpetas `includes/`, `partials/` y `storage/` tienen un `.htaccess` que bloquea el acceso directo (Apache). Si el hosting usa Nginx, pedí que bloqueen esas tres carpetas.
+PHP 8.1 o superior, sin base de datos. Es un sitio PHP: **no** usa Node.js ni `package.json`.
+
+### Hostinger (desde GitHub)
+
+1. hPanel → **Sitios web** → zest.uy → **Avanzado → GIT** (no uses "Node.js" ni "Importar desde GitHub" para apps: esos piden `package.json`).
+2. Repositorio: `https://github.com/julian-raviolo/zest-uy.git`, rama `main`, directorio vacío (se instala en `public_html`, que tiene que estar vacío).
+3. **Crear** y después **Desplegar**. Activá **Implementación automática** y pegá el webhook en GitHub (Settings → Webhooks) para que cada cambio se publique solo.
+4. En **Configuración de PHP** elegí 8.1 o superior.
+
+### Otro hosting
+
+Subí todo a `public_html` (o la raíz del dominio).
+Las carpetas `includes/`, `partials/` y `storage/` tienen un `.htaccess` que bloquea el acceso directo, y el `.htaccess` principal bloquea la carpeta `.git` (Apache y LiteSpeed). Si el hosting usa Nginx, pedí que bloqueen esas carpetas.
 
 ## Formulario
 

@@ -20,6 +20,6 @@
   </div>
 </footer>
 
-<script src="assets/js/main.js?v=6" defer></script>
+<script src="<?= e(asset('js/main.js')) ?>" defer></script>
 </body>
 </html>

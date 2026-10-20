@@ -17,6 +17,7 @@ $waLink = $waBase . '?text=' . rawurlencode('Hola Zest, quiero pedir un diagnós
         <h2 class="cta__title" id="contacto-title">Armá tu equipo</h2>
         <p class="cta__lead">Marcá lo que necesitás y dejanos tus datos. Te escribimos para una reunión de diagnóstico, sin compromiso.</p>
         <ul class="cta__links">
+          <li><a href="<?= e($waLink) ?>" target="_blank" rel="noopener" data-wa-link><?= ico('whatsapp', 'cta__ico') ?><?= e($contact['whatsapp_label']) ?></a></li>
           <li><a href="mailto:<?= e($email) ?>"><?= ico('mail', 'cta__ico') ?><?= e($email) ?></a></li>
           <li><a href="https://instagram.com/<?= e($contact['instagram']) ?>" target="_blank" rel="noopener"><?= ico('instagram', 'cta__ico') ?>@<?= e($contact['instagram']) ?></a></li>
         </ul>
