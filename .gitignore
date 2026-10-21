@@ -2,3 +2,6 @@ storage/*.csv
 storage/*.json
 storage/*.log
 .DS_Store
+
+# Firma de email: vive solo en el servidor y no se toca sin pedido explícito (ver CLAUDE.md)
+assets/img/firma/

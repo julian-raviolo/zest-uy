@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "deny": [
+      "Edit(/assets/img/firma/**)",
+      "Write(/assets/img/firma/**)",
+      "NotebookEdit(/assets/img/firma/**)"
+    ]
+  }
+}
