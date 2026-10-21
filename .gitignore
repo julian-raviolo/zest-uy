@@ -5,3 +5,6 @@ storage/*.log
 
 # Firma de email: vive solo en el servidor y no se toca sin pedido explícito (ver CLAUDE.md)
 assets/img/firma/
+
+# CRM de crm.zest.uy (EspoCRM): vive solo en el servidor, en public_html/crm
+crm/
