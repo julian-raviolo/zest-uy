@@ -1,0 +1,177 @@
+{
+  "communities": {
+    "0": [
+      "readme",
+      "readme_antes_de_publicar",
+      "readme_después_de_publicar",
+      "readme_formulario",
+      "readme_movimiento",
+      "readme_probar_en_tu_computadora",
+      "readme_secciones",
+      "readme_seo_incluido",
+      "readme_zest_sitio_web"
+    ],
+    "1": [
+      "includes_functions",
+      "includes_functions_asset",
+      "includes_functions_csrf_token",
+      "includes_functions_e",
+      "includes_functions_zest_mark",
+      "includes_functions_zest_session",
+      "includes_icons",
+      "includes_icons_ico"
+    ],
+    "2": [
+      "claude",
+      "claude_carpeta_del_crm_crm",
+      "claude_carpeta_protegida_assets_img_firma",
+      "claude_zest_instrucciones_para_claude"
+    ],
+    "3": [
+      "contacto",
+      "contacto_back",
+      "contacto_closure_1",
+      "contacto_closure_2"
+    ],
+    "4": [
+      "partials_head",
+      "partials_head_closure_1",
+      "partials_head_closure_2"
+    ],
+    "5": [
+      "readme_hostinger_desde_github",
+      "readme_otro_hosting",
+      "readme_subir_al_hosting"
+    ],
+    "6": [
+      "includes_illustrations",
+      "includes_illustrations_illustration"
+    ],
+    "7": [
+      "assets_js_main"
+    ],
+    "8": [
+      "includes_config"
+    ],
+    "9": [
+      "index"
+    ],
+    "10": [
+      "partials_contacto"
+    ],
+    "11": [
+      "partials_faq"
+    ],
+    "12": [
+      "partials_footer"
+    ],
+    "13": [
+      "partials_header"
+    ],
+    "14": [
+      "partials_hero"
+    ],
+    "15": [
+      "partials_metodo"
+    ],
+    "16": [
+      "partials_servicios"
+    ]
+  },
+  "cohesion": {
+    "0": 0.2222222222222222,
+    "1": 0.32142857142857145,
+    "2": 0.5,
+    "3": 0.5,
+    "4": 0.6666666666666666,
+    "5": 0.6666666666666666,
+    "6": 1.0,
+    "7": 1.0,
+    "8": 1.0,
+    "9": 1.0,
+    "10": 1.0,
+    "11": 1.0,
+    "12": 1.0,
+    "13": 1.0,
+    "14": 1.0,
+    "15": 1.0,
+    "16": 1.0
+  },
+  "gods": [
+    {
+      "id": "readme_zest_sitio_web",
+      "label": "Zest — sitio web",
+      "degree": 8
+    },
+    {
+      "id": "includes_functions_e",
+      "label": "e()",
+      "degree": 3
+    },
+    {
+      "id": "claude_zest_instrucciones_para_claude",
+      "label": "Zest — instrucciones para Claude",
+      "degree": 3
+    },
+    {
+      "id": "readme_subir_al_hosting",
+      "label": "Subir al hosting",
+      "degree": 3
+    },
+    {
+      "id": "includes_functions_csrf_token",
+      "label": "csrf_token()",
+      "degree": 2
+    },
+    {
+      "id": "includes_functions_zest_mark",
+      "label": "zest_mark()",
+      "degree": 2
+    },
+    {
+      "id": "includes_functions_zest_session",
+      "label": "zest_session()",
+      "degree": 2
+    },
+    {
+      "id": "includes_icons_ico",
+      "label": "ico()",
+      "degree": 2
+    },
+    {
+      "id": "readme_seo_incluido",
+      "label": "SEO incluido",
+      "degree": 2
+    },
+    {
+      "id": "readme_antes_de_publicar",
+      "label": "Antes de publicar",
+      "degree": 1
+    }
+  ],
+  "surprises": [
+    {
+      "source": "ico()",
+      "target": "e()",
+      "source_files": [
+        "includes/icons.php",
+        "includes/functions.php"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `Zest — sitio web` connect `Documentación del sitio` to `Publicación en hosting`?",
+      "why": "High betweenness centrality (0.059) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `Subir al hosting` connect `Publicación en hosting` to `Documentación del sitio`?",
+      "why": "High betweenness centrality (0.022) - this node is a cross-community bridge."
+    }
+  ]
+}

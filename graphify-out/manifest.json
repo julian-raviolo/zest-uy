@@ -1,0 +1,146 @@
+{
+  ".claude/settings.json": {
+    "mtime": 1792867637.0567,
+    "seen": 1792867662.804849,
+    "ast_hash": "ab0279a3a3805d6363dcf0d72adb218a",
+    "semantic_hash": ""
+  },
+  "assets/js/main.js": {
+    "mtime": 1792867637.0608253,
+    "seen": 1792867662.8048542,
+    "ast_hash": "f6d0daa4161810d3bcc29cf4eb0dd411",
+    "semantic_hash": ""
+  },
+  "contacto.php": {
+    "mtime": 1792867637.0608253,
+    "seen": 1792867662.8048565,
+    "ast_hash": "102ec711a04dde21fac78f085fcbaba4",
+    "semantic_hash": ""
+  },
+  "includes/config.php": {
+    "mtime": 1792867637.065655,
+    "seen": 1792867662.8048575,
+    "ast_hash": "22d7944b307e60f74acfa9fa321cf74b",
+    "semantic_hash": ""
+  },
+  "includes/functions.php": {
+    "mtime": 1792867637.065655,
+    "seen": 1792867662.8048587,
+    "ast_hash": "8c44e4c92c77cea2c34bddc147c8e74f",
+    "semantic_hash": ""
+  },
+  "includes/icons.php": {
+    "mtime": 1792867637.065655,
+    "seen": 1792867662.8048594,
+    "ast_hash": "3333e60b93387bb8b1c2704139ce71a6",
+    "semantic_hash": ""
+  },
+  "includes/illustrations.php": {
+    "mtime": 1792867637.065655,
+    "seen": 1792867662.8048606,
+    "ast_hash": "e9f7011e1622bba276b53c28ed49bf10",
+    "semantic_hash": ""
+  },
+  "index.php": {
+    "mtime": 1792867637.065655,
+    "seen": 1792867662.8048618,
+    "ast_hash": "6c21117b119472378eccbac3e338a042",
+    "semantic_hash": ""
+  },
+  "partials/contacto.php": {
+    "mtime": 1792867637.0675285,
+    "seen": 1792867662.8048625,
+    "ast_hash": "ab7d9ecb0b457895bb4102fda3c3477a",
+    "semantic_hash": ""
+  },
+  "partials/faq.php": {
+    "mtime": 1792867637.0675285,
+    "seen": 1792867662.8048632,
+    "ast_hash": "fc3a92f10f39083a014572dee928aa74",
+    "semantic_hash": ""
+  },
+  "partials/footer.php": {
+    "mtime": 1792867637.0675285,
+    "seen": 1792867662.804864,
+    "ast_hash": "78d5736d9516351202b70bacfa0c7de5",
+    "semantic_hash": ""
+  },
+  "partials/head.php": {
+    "mtime": 1792867637.0675285,
+    "seen": 1792867662.8048651,
+    "ast_hash": "db8f3146f8ad0ac509f3b1fa49e17c9c",
+    "semantic_hash": ""
+  },
+  "partials/header.php": {
+    "mtime": 1792867637.0675285,
+    "seen": 1792867662.8048663,
+    "ast_hash": "e1ea5ec4bfc75b8144c76aa337d1bf96",
+    "semantic_hash": ""
+  },
+  "partials/hero.php": {
+    "mtime": 1792867637.0675285,
+    "seen": 1792867662.8048673,
+    "ast_hash": "b86694640bd82f610698be9da2614c0b",
+    "semantic_hash": ""
+  },
+  "partials/metodo.php": {
+    "mtime": 1792867637.0675285,
+    "seen": 1792867662.804868,
+    "ast_hash": "e449b696485ec85edc7a9ff39c97e995",
+    "semantic_hash": ""
+  },
+  "partials/servicios.php": {
+    "mtime": 1792867637.0675285,
+    "seen": 1792867662.804869,
+    "ast_hash": "56054793ecaf560056f1037d12cee5ec",
+    "semantic_hash": ""
+  },
+  "CLAUDE.md": {
+    "mtime": 1792867637.0567,
+    "seen": 1792867662.8048697,
+    "ast_hash": "f3f9bd572ea1fd8270a538427cc5fd56",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1792867637.0567,
+    "seen": 1792867662.8048704,
+    "ast_hash": "d80be2fd033a8899e09dc6f8a336b030",
+    "semantic_hash": ""
+  },
+  "llms.txt": {
+    "mtime": 1792867637.065655,
+    "seen": 1792867662.8048713,
+    "ast_hash": "11c3cd4120a0709d76ab10afafb4762d",
+    "semantic_hash": ""
+  },
+  "robots.txt": {
+    "mtime": 1792867637.0675285,
+    "seen": 1792867662.804872,
+    "ast_hash": "0ca4d080f5674b1a8b302c77283b5957",
+    "semantic_hash": ""
+  },
+  "assets/img/apple-touch-icon.png": {
+    "mtime": 1792867637.0581067,
+    "seen": 1792867662.8048728,
+    "ast_hash": "a63da0e992b67b919f060ee4d1562133",
+    "semantic_hash": ""
+  },
+  "assets/img/favicon.svg": {
+    "mtime": 1792867637.0608253,
+    "seen": 1792867662.80489,
+    "ast_hash": "1257a374ea43b7c084e8f254a371d9ec",
+    "semantic_hash": ""
+  },
+  "assets/img/logo-zest.png": {
+    "mtime": 1792867637.0608253,
+    "seen": 1792867662.804893,
+    "ast_hash": "7cdf2eb2f7848b4ed3d0db888c1a8724",
+    "semantic_hash": ""
+  },
+  "assets/img/og-zest.png": {
+    "mtime": 1792867637.0608253,
+    "seen": 1792867662.8048942,
+    "ast_hash": "3336e7539f1e0ba6c54ed538dcb6e449",
+    "semantic_hash": ""
+  }
+}

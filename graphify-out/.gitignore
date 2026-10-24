@@ -1,0 +1,6 @@
+# Archivos locales de graphify que no se comparten
+cache/
+2026-*/
+.graphify_root
+.graphify_python
+.graphify_labels.pending.json
