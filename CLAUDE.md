@@ -22,3 +22,15 @@ y guarda datos de clientes en `crm/data/`.
 - No agregarla al repositorio (está en `.gitignore`) ni borrarla o modificarla sin pedido explícito.
 - Cambios en el `.htaccess` principal afectan también a `crm/`: revisarlos pensando en el CRM.
 - El tema de la marca se instala como extensión desde Administración → Extensiones.
+
+## Modelos y ahorro de tokens
+
+La sesión arranca en Sonnet (`.claude/settings.json`). Para cada pedido, elegí la opción más barata que alcance:
+
+- **Hacelo directo** si es un cambio ya claro (un texto, un estilo, un campo, un arreglo con causa conocida). No delegues lo trivial: un agente arranca de cero y cuesta más.
+- **Agente `explorador` (Haiku)** para buscar o entender algo que obligue a abrir más de 3 o 4 archivos, o a leer logs y documentación larga.
+- **Agente `verificador` (Haiku)** para correr las verificaciones después de cambiar código y traer solo los errores.
+- **Agente `arquitecto` (Opus)** antes de una funcionalidad nueva que toque varias partes, ante un bug cuya causa no quedó clara tras un intento, o para cambios de base de datos, permisos, login o seguridad. Después implementá vos su plan.
+- Si la tarea es grande y ambigua, decí en una línea qué modelo o agente vas a usar y por qué antes de arrancar.
+- Si Julián cambia a un tema que no tiene relación con lo anterior, sugerile hacer `/clear`.
+- Para pedir una recomendación de modelo: `/que-modelo <tarea>`.
