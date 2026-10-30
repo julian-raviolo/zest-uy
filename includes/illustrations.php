@@ -11,6 +11,46 @@ function illustration(string $id): string
 {
     switch ($id) {
 
+        // Tarjeta de sellos en el celular que se va llenando, con el QR de la caja y el aviso del premio
+        case 'wallet':
+            $sellos = '';
+            foreach (range(0, 9) as $n) {
+                $cx = 266 + ($n % 5) * 32;
+                $cy = 196 + intdiv($n, 5) * 36;
+                $sellos .= $n < 7
+                    ? '<g class="a-pop" style="--k:' . $n . '"><circle class="k-acc" cx="' . $cx . '" cy="' . $cy . '" r="13"/>'
+                      . '<path class="s-bg" d="M' . ($cx - 6) . ' ' . $cy . ' l4 4 8 -8" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g>'
+                    : '<circle class="s-mute" cx="' . $cx . '" cy="' . $cy . '" r="12" fill="none" stroke-width="2.5" stroke-dasharray="4 4"/>';
+            }
+            return <<<SVG
+<svg viewBox="0 0 600 450" role="img" aria-label="Tarjeta de fidelización en el celular con siete de diez sellos y el aviso de que falta poco para el premio">
+  <rect class="k-bg" width="600" height="450"/>
+  <rect class="k-soft" x="226" y="34" width="208" height="384" rx="34"/>
+  <rect class="k-ink" x="300" y="48" width="60" height="10" rx="5" opacity=".25"/>
+  <rect class="k-ink" x="246" y="84" width="168" height="196" rx="18"/>
+  <text class="t t--xs k-bg" x="264" y="122">Café Rambla</text>
+  <text class="t t--s k-mute" x="264" y="150">7 de 10 sellos</text>
+  {$sellos}
+  <g class="a-rise" style="--k:9">
+    <rect class="k-bg" x="246" y="296" width="168" height="104" rx="16"/>
+    <rect class="k-ink" x="268" y="312" width="72" height="72" rx="8"/>
+    <rect class="k-bg" x="278" y="322" width="18" height="18"/><rect class="k-bg" x="312" y="322" width="18" height="18"/>
+    <rect class="k-bg" x="278" y="356" width="18" height="18"/><rect class="k-bg" x="304" y="348" width="10" height="10"/>
+    <text class="t t--s k-ink" x="352" y="344">Mostrá</text><text class="t t--s k-ink" x="352" y="366">el QR</text>
+  </g>
+  <g class="a-float" style="--k:0">
+    <rect class="k-acc" x="40" y="96" width="166" height="70" rx="20"/>
+    <text class="t t--b k-bg" x="60" y="140">+1 sello</text>
+  </g>
+  <g class="a-float" style="--k:1">
+    <rect class="k-ink" x="452" y="232" width="128" height="92" rx="20"/>
+    <text class="t t--s k-bg" x="472" y="268">Te faltan</text>
+    <text class="t t--b k-acc" x="472" y="300">3 sellos</text>
+  </g>
+  <g class="a-pulse"><circle class="k-acc" cx="452" cy="96" r="30"/><text class="t t--b k-bg" x="452" y="104" text-anchor="middle">★</text></g>
+</svg>
+SVG;
+
         // Mensajes de clientes llegando por WhatsApp o Instagram
         case 'consultas':
             return <<<SVG

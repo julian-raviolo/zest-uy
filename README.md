@@ -4,8 +4,8 @@ Sitio de una sola página en PHP para zest.uy: fondo negro con detalles en Manda
 
 ## Secciones
 
-1. **Inicio:** "Todo tu marketing digital, en un solo equipo", con la órbita de los siete servicios girando alrededor del isotipo.
-2. **Servicios:** siete pestañas con ícono animado; cada una muestra su ilustración, qué incluye y un botón "Quiero este servicio" que lo marca en el formulario.
+1. **Inicio:** "Todo tu marketing digital, en un solo equipo", con la órbita de los ocho servicios girando alrededor del isotipo.
+2. **Servicios:** ocho pestañas (una es Zest Wallet, con botón a https://wallet.zest.uy) con ícono animado; cada una muestra su ilustración, qué incluye y un botón "Quiero este servicio" que lo marca en el formulario.
 3. **Proceso:** Escuchamos, Planeamos, Hacemos y Medimos, numerados y con íconos animados y una línea que se completa.
 4. **Preguntas frecuentes.**
 5. **Contacto:** tarjeta beige para armar tu equipo y pedir el diagnóstico.

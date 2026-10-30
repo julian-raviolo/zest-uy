@@ -34,6 +34,9 @@
               <li><?= ico('check', 'svc__check') ?><?= e($b) ?></li>
               <?php endforeach; ?>
             </ul>
+            <?php if (!empty($s['link'])): ?>
+            <a class="btn btn--sm more-cta" href="<?= e($s['link']['url']) ?>" target="_blank" rel="noopener"><?= e($s['link']['label']) ?> <?= ico('arrow', 'btn__ico') ?></a>
+            <?php endif; ?>
             <a class="more" href="#contacto" data-want="<?= e($s['pick']) ?>">Quiero este servicio <?= ico('arrow', 'more__ico') ?></a>
           </div>
         </article>

@@ -246,6 +246,7 @@ input, textarea, select { font-size: 16px; }
 .svc__bullets { display: grid; gap: 8px; }
 .svc__bullets li { display: flex; align-items: center; gap: 10px; color: var(--beige); font-size: 15px; }
 .svc__check { width: 18px; height: 18px; flex: none; color: var(--orange); }
+.more-cta { align-self: flex-start; margin-top: 4px; }
 .more { align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; margin-top: 4px; color: var(--orange); font-weight: 600; }
 .more__ico { width: 18px; height: 18px; transition: transform .35s var(--ease); }
 
@@ -282,6 +283,8 @@ input, textarea, select { font-size: 16px; }
 .s-ink  { stroke: var(--a-ink); }
 .s-acc  { stroke: var(--a-acc); }
 .s-soft { stroke: var(--a-soft); }
+.s-bg   { stroke: var(--a-bg); }
+.s-mute { stroke: var(--a-mute); }
 .t { font-family: var(--f-text); font-size: 20px; font-weight: 500; }
 .t--s { font-size: 17px; }
 .t--b { font-size: 22px; font-weight: 700; }
@@ -471,8 +474,10 @@ html:not(.js) .art .a-draw { stroke-dashoffset: 0; }
 .field__input:focus { outline: none; box-shadow: inset 0 0 0 2px var(--orange), 0 0 0 4px rgba(255, 91, 46, .16); }
 .cta__note { font-size: 13px; color: #4A4842; text-align: center; }
 
-/* Celular: la última opción (Automatizaciones con IA) queda sola en su fila, así que ocupa el ancho completo */
-@media (max-width: 699px) { .pick:last-child { grid-column: 1 / -1; } }
+/* Opciones con nombre largo (Zest Wallet, Automatizaciones con IA): fila completa en el celular;
+   en 3 columnas, la última ocupa dos para cerrar la fila */
+@media (max-width: 699px) { .pick--wide { grid-column: 1 / -1; } }
+@media (min-width: 700px) { .pick--wide:last-of-type { grid-column: span 2; } }
 @media (min-width: 700px) { .picks { grid-template-columns: repeat(3, minmax(0, 1fr)); } .fields { grid-template-columns: 1fr 1fr; } }
 @media (min-width: 900px) {
   .cta { grid-template-columns: 5fr 7fr; gap: 56px; padding: 56px; }

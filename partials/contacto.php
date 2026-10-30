@@ -29,7 +29,7 @@ $msg    = $messages[$formStatus] ?? null;
         <fieldset class="picks">
           <legend class="picks__legend">¿Qué necesitás?</legend>
           <?php foreach ($services as $s): ?>
-          <label class="pick">
+          <label class="pick<?= !empty($s['wide']) ? ' pick--wide' : '' ?>">
             <input type="checkbox" name="servicios[]" value="<?= e($s['pick']) ?>">
             <span class="pick__box"><?= ico($s['icon'], 'pick__ico') ?><span><?= e($s['pick']) ?></span></span>
           </label>

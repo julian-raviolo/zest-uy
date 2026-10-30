@@ -13,7 +13,7 @@ return [
         'title'       => 'Agencia de marketing digital en Uruguay | Zest',
         'description' => 'Zest es una agencia de marketing digital 360 en Uruguay: Google y Meta Ads, redes, branding, diseño web, ventas, automatizaciones con IA y consultoría.',
         'lang'        => 'es-UY',
-        'updated'     => '2026-10-19',                  // fecha de la última actualización del contenido
+        'updated'     => '2026-10-30',                  // fecha de la última actualización del contenido
     ],
 
     // Datos de contacto
@@ -95,6 +95,18 @@ return [
             'bullets' => ['Diagnóstico digital', 'Hoja de ruta', 'Seguimiento mensual'],
         ],
         [
+            'id'      => 'wallet',
+            'icon'    => 'wallet',
+            'pick'    => 'Zest Wallet (fidelización)',
+            'title'   => 'Zest Wallet',
+            'name'    => 'Zest Wallet: tarjetas de fidelización en el celular',
+            'short'   => 'Clientes que vuelven por el premio.',
+            'text'    => 'Tarjetas de sellos, cashback y puntos con la marca de tu local. Tus clientes se suman con un QR, guardan la tarjeta en Apple Wallet o Google Wallet y vuelven por el premio, sin bajar ninguna app.',
+            'bullets' => ['Tarjeta con tu marca en el celular', 'Sellos desde la caja con un QR', 'Avisos y premios automáticos'],
+            'link'    => ['url' => 'https://wallet.zest.uy', 'label' => 'Conocer Zest Wallet'],
+            'wide'    => true,   // en el formulario ocupa la fila completa en el celular
+        ],
+        [
             'id'      => 'ia',
             'icon'    => 'ia',
             'pick'    => 'Automatizaciones con IA',
@@ -103,6 +115,7 @@ return [
             'short'   => 'Tareas repetitivas que se resuelven solas.',
             'text'    => 'Asistentes con IA que responden en WhatsApp e Instagram a cualquier hora, seguimientos automáticos y flujos que conectan tu web, tu CRM y tus redes, para que tu equipo dedique el tiempo a vender.',
             'bullets' => ['Chatbots de WhatsApp e Instagram', 'Seguimientos automáticos', 'Flujos conectados con tu CRM'],
+            'wide'    => true,
         ],
     ],
 

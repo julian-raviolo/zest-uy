@@ -37,6 +37,12 @@ function ico(string $name, string $class = 'ico'): string
             <path class="d i-star" d="M14 5l2.4 6.6L23 14l-6.6 2.4L14 23l-2.4-6.6L5 14l6.6-2.4z"/>
             <path class="i-s1" d="M24.5 19.5l1 2.5 2.5 1-2.5 1-1 2.5-1-2.5-2.5-1 2.5-1z"/>
             <path class="i-s2" d="M24 4l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/>',
+        'wallet' => '
+            <rect class="d" x="4" y="7" width="24" height="18" rx="3"/>
+            <path class="d" d="M4 12h24"/>
+            <circle class="d" cx="10" cy="19" r="2.2"/>
+            <circle class="d" cx="16" cy="19" r="2.2"/>
+            <circle class="i-s1" cx="22" cy="19" r="2.2"/>',
         'escuchar' => '
             <circle class="d" cx="9" cy="16" r="2.2"/>
             <path class="d i-w1" d="M14 11a7 7 0 0 1 0 10"/>

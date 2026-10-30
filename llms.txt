@@ -12,6 +12,7 @@ Zest trabaja con un solo plan y un solo reporte: el cliente habla con una person
 - [Diseño web y apps](https://zest.uy/#servicios): sitios rápidos pensados para el celular y para Google, tiendas online y apps a medida.
 - [Estrategia de ventas y CRM](https://zest.uy/#servicios): embudo de ventas, CRM, respuestas por WhatsApp y guiones para el equipo.
 - [Consultoría de marketing digital](https://zest.uy/#servicios): diagnóstico y hoja de ruta con prioridades, plazos y seguimiento mensual.
+- [Zest Wallet](https://wallet.zest.uy): tarjetas de fidelización en el celular (sellos, cashback y puntos) con la marca del local, en Apple Wallet y Google Wallet, sin que el cliente baje una app.
 - [Automatizaciones con IA](https://zest.uy/#servicios): chatbots con IA para WhatsApp e Instagram, seguimientos automáticos y flujos conectados con el CRM.
 
 ## Cómo trabaja
