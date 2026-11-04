@@ -22,3 +22,12 @@ y guarda datos de clientes en `crm/data/`.
 - No agregarla al repositorio (está en `.gitignore`) ni borrarla o modificarla sin pedido explícito.
 - Cambios en el `.htaccess` principal afectan también a `crm/`: revisarlos pensando en el CRM.
 - El tema de la marca se instala como extensión desde Administración → Extensiones.
+
+## Forma de trabajo
+
+- Antes de leer un archivo entero, buscar con grep y leer solo lo necesario.
+- Para explorar el proyecto, usar un subagente y traer solo el resumen.
+- Mostrar el diff, no el archivo completo.
+- No repetir ni volver sobre lo ya decidido en la sesión.
+- Si cambia la tarea, proponer `/compact` o una sesión nueva.
+- Respuestas cortas por defecto.
