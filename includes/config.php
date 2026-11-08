@@ -127,6 +127,12 @@ return [
     ],
 
     // Preguntas frecuentes: se muestran en la página y se publican como datos estructurados (FAQPage).
+    // Portafolio: sumá fotos acá (archivo en assets/img/portafolio/NOMBRE-800.webp y NOMBRE-1600.webp).
+    'portfolio' => [
+        ['file' => 'moda-dunas',     'title' => 'Moda · Verano',    'client' => 'Fotografía de producto', 'w' => 1600, 'h' => 1067, 'alt' => 'Modelo recostada en las dunas con traje de baño estampado'],
+        ['file' => 'retrato-beauty', 'title' => 'Retrato · Beauty', 'client' => 'Fotografía de marca',    'w' => 1600, 'h' => 1067, 'alt' => 'Retrato de perfil con cabello castaño ondulado sobre fondo verde azulado'],
+    ],
+
     'faq' => [
         [
             'q' => '¿Qué hace una agencia de marketing digital?',

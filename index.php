@@ -11,6 +11,7 @@ $contact  = $config['contact'];
 $services = $config['services'];
 $steps    = $config['steps'];
 $faq      = $config['faq'];
+$portfolio = $config['portfolio'];
 $email    = $contact['email_user'] . '@' . $contact['email_domain'];
 
 $formStatus = $_GET['form'] ?? '';
@@ -24,6 +25,7 @@ require __DIR__ . '/partials/header.php';
 <?php
 require __DIR__ . '/partials/hero.php';
 require __DIR__ . '/partials/servicios.php';
+require __DIR__ . '/partials/portafolio.php';
 require __DIR__ . '/partials/metodo.php';
 require __DIR__ . '/partials/faq.php';
 require __DIR__ . '/partials/contacto.php';

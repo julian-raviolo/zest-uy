@@ -6,6 +6,7 @@
     </a>
     <nav class="nav" aria-label="Principal">
       <a href="#servicios">Servicios</a>
+      <a href="#portafolio">Portafolio</a>
       <a href="#proceso">Proceso</a>
       <a href="#preguntas">Preguntas</a>
     </nav>

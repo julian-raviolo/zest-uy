@@ -554,3 +554,55 @@ html:not(.js) .art .a-draw { stroke-dashoffset: 0; }
   .js [data-reveal] .ico .d { stroke-dashoffset: 0; }
   .art .a-travel { display: none; }
 }
+
+/* --------------------------------------------------------------------------
+   Portafolio
+   -------------------------------------------------------------------------- */
+.pf__grid { list-style: none; margin: 32px 0 0; padding: 0; display: grid; gap: 14px; grid-template-columns: 1fr; }
+.pf__item { margin: 0; }
+.pf__btn {
+  position: relative; display: block; width: 100%; padding: 0; border: 0; border-radius: 18px; overflow: hidden;
+  background: var(--card); cursor: zoom-in; color: var(--white); text-align: left; isolation: isolate;
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+.pf__img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; transform: scale(1.001); transition: transform 1.1s var(--ease), filter .6s; filter: saturate(.92) contrast(1.02); }
+.pf__shade { position: absolute; inset: 0; z-index: 1; background: linear-gradient(to top, rgba(11,11,10,.82) 0%, rgba(11,11,10,.15) 42%, transparent 60%); }
+.pf__meta { position: absolute; z-index: 2; left: 18px; right: 64px; bottom: 16px; display: grid; gap: 2px; }
+.pf__n { font-family: var(--f-mono); font-size: 12px; letter-spacing: .14em; color: var(--orange); }
+.pf__title { font-family: var(--f-display); font-stretch: 108%; font-weight: 700; font-size: clamp(20px, 5vw, 26px); letter-spacing: -.025em; line-height: 1.1; }
+.pf__client { font-size: 13px; color: var(--beige-dim); }
+.pf__zoom { position: absolute; z-index: 2; right: 14px; bottom: 14px; width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center;
+  background: rgba(11,11,10,.55); backdrop-filter: blur(8px); box-shadow: inset 0 0 0 1px var(--line-2); transform: rotate(-45deg); transition: background .3s, color .3s, transform .5s var(--ease); }
+.pf__zoom .ico { width: 18px; height: 18px; }
+.pf__btn:focus-visible { outline: 2px solid var(--orange); outline-offset: 3px; }
+@media (hover: hover) {
+  .pf__btn:hover .pf__img { transform: scale(1.05); filter: saturate(1.05) contrast(1.04); }
+  .pf__btn:hover .pf__zoom { background: var(--orange); color: var(--ink); transform: rotate(0); }
+}
+.pf__cta { margin: 32px 0 0; display: flex; justify-content: center; }
+@media (min-width: 760px) {
+  .pf__grid { grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 44px; }
+  .pf__item:nth-child(even) { margin-top: 56px; }
+  .pf__img { aspect-ratio: 4 / 5; }
+}
+@media (min-width: 1000px) {
+  .pf__grid { grid-template-columns: repeat(12, 1fr); }
+  .pf__item:nth-child(3n+1) { grid-column: span 7; }
+  .pf__item:nth-child(3n+2) { grid-column: span 5; }
+  .pf__item:nth-child(3n) { grid-column: span 6; margin-top: 0; }
+  .pf__item:nth-child(3n+1) .pf__img { aspect-ratio: 5 / 4; }
+}
+
+/* Visor a pantalla completa */
+.lb { position: fixed; inset: 0; z-index: 80; display: grid; place-items: center; background: rgba(8,8,7,.94); backdrop-filter: blur(14px); padding: 56px 12px 40px; }
+.lb[hidden] { display: none; }
+.lb__fig { margin: 0; display: grid; gap: 12px; justify-items: center; max-width: 100%; }
+.lb__img { max-width: min(1400px, 100%); max-height: calc(100vh - 150px); width: auto; height: auto; border-radius: 12px; animation: lbIn .5s var(--ease); }
+.lb__cap { font-family: var(--f-mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--beige-dim); }
+.lb__x, .lb__nav { position: absolute; border: 0; cursor: pointer; color: var(--white); background: rgba(250,250,247,.08); box-shadow: inset 0 0 0 1px var(--line-2); border-radius: 50%; width: 44px; height: 44px; font-size: 26px; line-height: 1; display: grid; place-items: center; transition: background .25s, color .25s; }
+.lb__x { top: 12px; right: 12px; }
+.lb__nav { top: 50%; transform: translateY(-50%); }
+.lb__nav--prev { left: 10px; } .lb__nav--next { right: 10px; }
+.lb__x:hover, .lb__nav:hover, .lb__x:focus-visible, .lb__nav:focus-visible { background: var(--orange); color: var(--ink); outline: none; }
+@keyframes lbIn { from { opacity: 0; transform: scale(.97); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .pf__img, .pf__zoom { transition: none; } .lb__img { animation: none; } }

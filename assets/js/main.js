@@ -101,4 +101,35 @@
       });
     });
   }
+  /* Portafolio: visor a pantalla completa */
+  const lb = document.getElementById('lb');
+  const pfBtns = [...document.querySelectorAll('[data-pf]')];
+  if (lb && pfBtns.length) {
+    const img = lb.querySelector('.lb__img'), cap = lb.querySelector('.lb__cap');
+    let cur = 0, opener = null;
+    const show = (n) => {
+      cur = (n + pfBtns.length) % pfBtns.length;
+      const b = pfBtns[cur];
+      img.src = b.dataset.full; img.alt = b.querySelector('img').alt; cap.textContent = b.dataset.cap;
+      lb.querySelectorAll('[data-lb=prev],[data-lb=next]').forEach((x) => { x.hidden = pfBtns.length < 2; });
+    };
+    const close = () => { lb.hidden = true; document.body.style.overflow = ''; if (opener) opener.focus(); };
+    pfBtns.forEach((b, i) => b.addEventListener('click', () => {
+      opener = b; show(i); lb.hidden = false; document.body.style.overflow = 'hidden'; lb.querySelector('.lb__x').focus();
+    }));
+    lb.addEventListener('click', (e) => {
+      const a = e.target.closest('[data-lb]');
+      if (a) { a.dataset.lb === 'close' ? close() : show(cur + (a.dataset.lb === 'next' ? 1 : -1)); }
+      else if (e.target === lb || e.target.classList.contains('lb__fig')) close();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (lb.hidden) return;
+      if (e.key === 'Escape') close();
+      if (e.key === 'ArrowRight') show(cur + 1);
+      if (e.key === 'ArrowLeft') show(cur - 1);
+    });
+    let x0 = null;
+    lb.addEventListener('touchstart', (e) => { x0 = e.touches[0].clientX; }, { passive: true });
+    lb.addEventListener('touchend', (e) => { if (x0 === null) return; const d = e.changedTouches[0].clientX - x0; if (Math.abs(d) > 50) show(cur + (d < 0 ? 1 : -1)); x0 = null; }, { passive: true });
+  }
 })();
