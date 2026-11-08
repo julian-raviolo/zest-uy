@@ -565,3 +565,5 @@ html:not(.js) .art .a-draw { stroke-dashoffset: 0; }
 .footer__cookies { font: inherit; font-size: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; opacity: .8; }
 .footer__cookies:hover { opacity: 1; }
 .footer__cookies:focus-visible { outline: 2px solid var(--orange); outline-offset: 3px; }
+
+.cookies__text a { color: var(--orange); text-decoration: underline; text-underline-offset: 3px; }

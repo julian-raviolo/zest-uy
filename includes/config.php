@@ -16,7 +16,7 @@ return [
         'ga_id'       => 'G-32FKG83YS7',               // Google Analytics 4 (vacío = no se carga)
         'ads_id'      => 'AW-16762086803',             // Google Ads (vacío = no se carga)
         'pixel_id'    => '1078894170591120',           // Meta Pixel (vacío = no se carga)
-        'updated'     => '2026-10-30',                  // fecha de la última actualización del contenido
+        'updated'     => '2026-11-08',                  // fecha de la última actualización del contenido
     ],
 
     // Datos de contacto

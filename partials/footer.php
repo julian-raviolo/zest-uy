@@ -17,19 +17,12 @@
     </div>
     <div class="footer__meta">
       <span>© <?= e($year) ?> Zest. Todos los derechos reservados.</span>
-      <button type="button" class="footer__cookies" data-cookies-open>Preferencias de cookies</button>
+      <span><a href="privacidad.php">Privacidad</a> · <button type="button" class="footer__cookies" data-cookies-open>Preferencias de cookies</button></span>
     </div>
   </div>
 </footer>
 
-<div class="cookies" id="cookies" role="dialog" aria-labelledby="cookies-title" aria-describedby="cookies-text" hidden>
-  <p class="cookies__title" id="cookies-title">Cookies</p>
-  <p class="cookies__text" id="cookies-text">Usamos cookies para medir las visitas y mejorar nuestros anuncios. Podés aceptarlas o quedarte solo con las necesarias.</p>
-  <div class="cookies__btns">
-    <button type="button" class="btn btn--sm" data-cookies="granted">Aceptar</button>
-    <button type="button" class="btn btn--sm btn--ghost" data-cookies="denied">Solo necesarias</button>
-  </div>
-</div>
+<?php require __DIR__ . '/cookies.php'; ?>
 
 <script src="<?= e(asset('js/main.js')) ?>" defer></script>
 <script src="<?= e(asset('js/cookies.js')) ?>" defer></script>
