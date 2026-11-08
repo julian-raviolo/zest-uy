@@ -105,13 +105,17 @@ $schema = [
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..900&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="<?= e(asset('css/styles.css')) ?>">
-<?php if (!empty($site['ga_id'])): ?>
-<script async src="https://www.googletagmanager.com/gtag/js?id=<?= e($site['ga_id']) ?>"></script>
+<?php $gtagIds = array_values(array_filter([$site['ga_id'] ?? '', $site['ads_id'] ?? ''])); ?>
+<?php if ($gtagIds): ?>
+<!-- Google tag (gtag.js): Analytics + Ads -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=<?= e($gtagIds[0]) ?>"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', '<?= e($site['ga_id']) ?>');
+<?php foreach ($gtagIds as $gid): ?>
+  gtag('config', '<?= e($gid) ?>');
+<?php endforeach; ?>
 </script>
 <?php endif; ?>
 

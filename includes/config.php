@@ -14,6 +14,7 @@ return [
         'description' => 'Zest es una agencia de marketing digital 360 en Uruguay: Google y Meta Ads, redes, branding, diseño web, ventas, automatizaciones con IA y consultoría.',
         'lang'        => 'es-UY',
         'ga_id'       => 'G-32FKG83YS7',               // Google Analytics 4 (vacío = no se carga)
+        'ads_id'      => 'AW-16762086803',             // Google Ads (vacío = no se carga)
         'updated'     => '2026-10-30',                  // fecha de la última actualización del contenido
     ],
 
