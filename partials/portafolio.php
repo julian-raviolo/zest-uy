@@ -4,20 +4,23 @@
       <p class="label" data-reveal>Portafolio</p>
       <h2 class="h2" id="portafolio-title" data-reveal style="--d:60ms">Imágenes que venden antes de hablar</h2>
     </div>
-    <ul class="pf__grid" data-reveal>
-      <?php foreach ($portfolio as $i => $p):
-          $base = 'assets/img/portafolio/' . $p['file']; ?>
-      <li class="pf__item">
-        <button class="pf__btn" type="button" data-pf="<?= $i ?>" data-full="<?= e($base) ?>-1600.webp" data-cap="<?= e($p['title']) ?>" aria-label="Ver en grande: <?= e($p['title']) ?>">
-          <img class="pf__img" src="<?= e($base) ?>-800.webp" srcset="<?= e($base) ?>-800.webp 800w, <?= e($base) ?>-1600.webp 1600w" sizes="(min-width: 900px) 560px, 92vw"
-               width="<?= (int) $p['w'] ?>" height="<?= (int) $p['h'] ?>" alt="<?= e($p['alt']) ?>" loading="lazy" decoding="async">
+    <div class="pf__filters" role="group" aria-label="Filtrar portafolio" data-reveal>
+      <button type="button" class="pf__chip is-on" data-filter="all" aria-pressed="true">Todo</button>
+      <?php foreach ($pfCats as $k => $label): ?>
+      <button type="button" class="pf__chip" data-filter="<?= e($k) ?>" aria-pressed="false"><?= e($label) ?></button>
+      <?php endforeach; ?>
+    </div>
+    <ul class="pf__grid">
+      <?php $count = []; foreach ($portfolio as $i => $p):
+          $base = 'assets/img/portafolio/' . $p['file'];
+          $label = $pfCats[$p['cat']] ?? '';
+          $count[$p['cat']] = ($count[$p['cat']] ?? 0) + 1; ?>
+      <li class="pf__item" data-cat="<?= e($p['cat']) ?>">
+        <button class="pf__btn" type="button" data-pf data-full="<?= e($base) ?>-1600.webp" data-cap="<?= e($label) ?>" aria-label="Ver en grande: <?= e($label) ?> <?= $count[$p['cat']] ?>">
+          <img class="pf__img" src="<?= e($base) ?>-800.webp" width="<?= (int) $p['w'] ?>" height="<?= (int) $p['h'] ?>"
+               alt="<?= e($label) ?>: fotografía de Zest" loading="lazy" decoding="async">
           <span class="pf__shade" aria-hidden="true"></span>
-          <span class="pf__meta">
-            <span class="pf__n"><?= str_pad((string) ($i + 1), 2, '0', STR_PAD_LEFT) ?></span>
-            <span class="pf__title"><?= e($p['title']) ?></span>
-            <span class="pf__client"><?= e($p['client']) ?></span>
-          </span>
-          <span class="pf__zoom" aria-hidden="true"><?= ico('arrow') ?></span>
+          <span class="pf__meta"><span class="pf__n"><?= e($label) ?></span></span>
         </button>
       </li>
       <?php endforeach; ?>

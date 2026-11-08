@@ -127,11 +127,33 @@ return [
     ],
 
     // Preguntas frecuentes: se muestran en la página y se publican como datos estructurados (FAQPage).
-    // Portafolio: sumá fotos acá (archivo en assets/img/portafolio/NOMBRE-800.webp y NOMBRE-1600.webp).
+    // Portafolio: cada foto = assets/img/portafolio/ARCHIVO-800.webp y ARCHIVO-1600.webp. 'cat' elige el filtro.
     'portfolio' => [
-        ['file' => 'moda-dunas',     'title' => 'Moda · Verano',    'client' => 'Fotografía de producto', 'w' => 1600, 'h' => 1067, 'alt' => 'Modelo recostada en las dunas con traje de baño estampado'],
-        ['file' => 'retrato-beauty', 'title' => 'Retrato · Beauty', 'client' => 'Fotografía de marca',    'w' => 1600, 'h' => 1067, 'alt' => 'Retrato de perfil con cabello castaño ondulado sobre fondo verde azulado'],
+        ['cat' => 'moda', 'file' => 'moda-01', 'w' => 900, 'h' => 600],
+        ['cat' => 'moda', 'file' => 'moda-02', 'w' => 544, 'h' => 900],
+        ['cat' => 'moda', 'file' => 'moda-03', 'w' => 627, 'h' => 900],
+        ['cat' => 'moda', 'file' => 'moda-04', 'w' => 548, 'h' => 900],
+        ['cat' => 'moda', 'file' => 'moda-05', 'w' => 479, 'h' => 900],
+        ['cat' => 'moda', 'file' => 'moda-06', 'w' => 524, 'h' => 900],
+        ['cat' => 'moda', 'file' => 'moda-07', 'w' => 530, 'h' => 900],
+        ['cat' => 'moda', 'file' => 'moda-08', 'w' => 900, 'h' => 600],
+        ['cat' => 'eventos', 'file' => 'eventos-01', 'w' => 900, 'h' => 590],
+        ['cat' => 'eventos', 'file' => 'eventos-02', 'w' => 900, 'h' => 598],
+        ['cat' => 'eventos', 'file' => 'eventos-03', 'w' => 600, 'h' => 900],
+        ['cat' => 'eventos', 'file' => 'eventos-04', 'w' => 900, 'h' => 598],
+        ['cat' => 'eventos', 'file' => 'eventos-05', 'w' => 682, 'h' => 900],
+        ['cat' => 'eventos', 'file' => 'eventos-06', 'w' => 900, 'h' => 598],
+        ['cat' => 'eventos', 'file' => 'eventos-07', 'w' => 900, 'h' => 598],
+        ['cat' => 'eventos', 'file' => 'eventos-08', 'w' => 900, 'h' => 571],
+        ['cat' => 'eventos', 'file' => 'eventos-09', 'w' => 600, 'h' => 900],
+        ['cat' => 'eventos', 'file' => 'eventos-10', 'w' => 900, 'h' => 653],
+        ['cat' => 'eventos', 'file' => 'eventos-11', 'w' => 600, 'h' => 900],
+        ['cat' => 'eventos', 'file' => 'eventos-12', 'w' => 900, 'h' => 600],
+        ['cat' => 'producto', 'file' => 'producto-01', 'w' => 900, 'h' => 600],
+        ['cat' => 'producto', 'file' => 'producto-02', 'w' => 900, 'h' => 600],
+        ['cat' => 'producto', 'file' => 'producto-03', 'w' => 900, 'h' => 600],
     ],
+    'portfolio_cats' => ['moda' => 'Moda', 'eventos' => 'Música en vivo', 'producto' => 'Producto'],
 
     'faq' => [
         [

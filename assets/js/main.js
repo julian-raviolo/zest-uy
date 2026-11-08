@@ -101,21 +101,27 @@
       });
     });
   }
-  /* Portafolio: visor a pantalla completa */
+  /* Portafolio: filtros y visor a pantalla completa */
   const lb = document.getElementById('lb');
-  const pfBtns = [...document.querySelectorAll('[data-pf]')];
-  if (lb && pfBtns.length) {
+  const pfItems = [...document.querySelectorAll('.pf__item')];
+  if (lb && pfItems.length) {
     const img = lb.querySelector('.lb__img'), cap = lb.querySelector('.lb__cap');
-    let cur = 0, opener = null;
+    const chips = [...document.querySelectorAll('[data-filter]')];
+    let cur = 0, opener = null, list = [];
+    const visible = () => pfItems.filter((li) => !li.hidden).map((li) => li.querySelector('[data-pf]'));
+    chips.forEach((c) => c.addEventListener('click', () => {
+      chips.forEach((x) => { const on = x === c; x.classList.toggle('is-on', on); x.setAttribute('aria-pressed', on); });
+      pfItems.forEach((li) => { li.hidden = c.dataset.filter !== 'all' && li.dataset.cat !== c.dataset.filter; });
+    }));
     const show = (n) => {
-      cur = (n + pfBtns.length) % pfBtns.length;
-      const b = pfBtns[cur];
-      img.src = b.dataset.full; img.alt = b.querySelector('img').alt; cap.textContent = b.dataset.cap;
-      lb.querySelectorAll('[data-lb=prev],[data-lb=next]').forEach((x) => { x.hidden = pfBtns.length < 2; });
+      cur = (n + list.length) % list.length;
+      const b = list[cur];
+      img.src = b.dataset.full; img.alt = b.querySelector('img').alt; cap.textContent = (cur + 1) + ' / ' + list.length + ' · ' + b.dataset.cap;
+      lb.querySelectorAll('[data-lb=prev],[data-lb=next]').forEach((x) => { x.hidden = list.length < 2; });
     };
     const close = () => { lb.hidden = true; document.body.style.overflow = ''; if (opener) opener.focus(); };
-    pfBtns.forEach((b, i) => b.addEventListener('click', () => {
-      opener = b; show(i); lb.hidden = false; document.body.style.overflow = 'hidden'; lb.querySelector('.lb__x').focus();
+    document.querySelectorAll('[data-pf]').forEach((b) => b.addEventListener('click', () => {
+      opener = b; list = visible(); show(list.indexOf(b)); lb.hidden = false; document.body.style.overflow = 'hidden'; lb.querySelector('.lb__x').focus();
     }));
     lb.addEventListener('click', (e) => {
       const a = e.target.closest('[data-lb]');

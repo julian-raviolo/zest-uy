@@ -12,6 +12,7 @@ $services = $config['services'];
 $steps    = $config['steps'];
 $faq      = $config['faq'];
 $portfolio = $config['portfolio'];
+$pfCats    = $config['portfolio_cats'];
 $email    = $contact['email_user'] . '@' . $contact['email_domain'];
 
 $formStatus = $_GET['form'] ?? '';
