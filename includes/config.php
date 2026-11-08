@@ -127,33 +127,22 @@ return [
     ],
 
     // Preguntas frecuentes: se muestran en la página y se publican como datos estructurados (FAQPage).
-    // Portafolio: cada foto = assets/img/portafolio/ARCHIVO-800.webp y ARCHIVO-1600.webp. 'cat' elige el filtro.
+    // Portafolio: ARCHIVO-sq.webp (cuadrada 640) y ARCHIVO-1600.webp (visor). Van dos filas; la última celda es el botón.
     'portfolio' => [
-        ['cat' => 'moda', 'file' => 'moda-01', 'w' => 900, 'h' => 600],
-        ['cat' => 'moda', 'file' => 'moda-02', 'w' => 544, 'h' => 900],
-        ['cat' => 'moda', 'file' => 'moda-03', 'w' => 627, 'h' => 900],
-        ['cat' => 'moda', 'file' => 'moda-04', 'w' => 548, 'h' => 900],
-        ['cat' => 'moda', 'file' => 'moda-05', 'w' => 479, 'h' => 900],
-        ['cat' => 'moda', 'file' => 'moda-06', 'w' => 524, 'h' => 900],
-        ['cat' => 'moda', 'file' => 'moda-07', 'w' => 530, 'h' => 900],
-        ['cat' => 'moda', 'file' => 'moda-08', 'w' => 900, 'h' => 600],
-        ['cat' => 'eventos', 'file' => 'eventos-01', 'w' => 900, 'h' => 590],
-        ['cat' => 'eventos', 'file' => 'eventos-02', 'w' => 900, 'h' => 598],
-        ['cat' => 'eventos', 'file' => 'eventos-03', 'w' => 600, 'h' => 900],
-        ['cat' => 'eventos', 'file' => 'eventos-04', 'w' => 900, 'h' => 598],
-        ['cat' => 'eventos', 'file' => 'eventos-05', 'w' => 682, 'h' => 900],
-        ['cat' => 'eventos', 'file' => 'eventos-06', 'w' => 900, 'h' => 598],
-        ['cat' => 'eventos', 'file' => 'eventos-07', 'w' => 900, 'h' => 598],
-        ['cat' => 'eventos', 'file' => 'eventos-08', 'w' => 900, 'h' => 571],
-        ['cat' => 'eventos', 'file' => 'eventos-09', 'w' => 600, 'h' => 900],
-        ['cat' => 'eventos', 'file' => 'eventos-10', 'w' => 900, 'h' => 653],
-        ['cat' => 'eventos', 'file' => 'eventos-11', 'w' => 600, 'h' => 900],
-        ['cat' => 'eventos', 'file' => 'eventos-12', 'w' => 900, 'h' => 600],
-        ['cat' => 'producto', 'file' => 'producto-01', 'w' => 900, 'h' => 600],
-        ['cat' => 'producto', 'file' => 'producto-02', 'w' => 900, 'h' => 600],
-        ['cat' => 'producto', 'file' => 'producto-03', 'w' => 900, 'h' => 600],
+        ['file' => 'foto-01', 'alt' => 'Modelo recostada en las dunas'],
+        ['file' => 'foto-02', 'alt' => 'Retrato de moda en la calle'],
+        ['file' => 'foto-03', 'alt' => 'Modelo en la playa'],
+        ['file' => 'foto-04', 'alt' => 'Modelo con vestido negro frente a estructura celeste'],
+        ['file' => 'foto-05', 'alt' => 'Músico en el escenario'],
+        ['file' => 'foto-06', 'alt' => 'Banda en vivo'],
+        ['file' => 'foto-07', 'alt' => 'Cantante en el escenario'],
+        ['file' => 'foto-08', 'alt' => 'Guitarrista en concierto'],
+        ['file' => 'foto-09', 'alt' => 'Concierto de banda'],
+        ['file' => 'foto-10', 'alt' => 'Aros rojos de bijouterie'],
+        ['file' => 'foto-11', 'alt' => 'Collar de bijouterie'],
+        ['file' => 'foto-12', 'alt' => 'Producto sobre fondo oscuro'],
+        ['file' => 'foto-13', 'alt' => 'Producto sobre fondo oscuro'],
     ],
-    'portfolio_cats' => ['moda' => 'Moda', 'eventos' => 'Música en vivo', 'producto' => 'Producto'],
 
     'faq' => [
         [
