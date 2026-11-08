@@ -53,3 +53,13 @@ $msg    = $messages[$formStatus] ?? null;
     </div>
   </div>
 </section>
+<?php if ($formStatus === 'ok'): ?>
+<script>
+  // Formulario enviado: avisa a Meta y a Google (una sola vez por envío, aunque se recargue la página).
+  (function () {
+    try { if (sessionStorage.getItem('zest_lead')) return; sessionStorage.setItem('zest_lead', '1'); } catch (e) {}
+    if (window.fbq) fbq('track', 'Lead');
+    if (window.gtag) gtag('event', 'generate_lead');
+  })();
+</script>
+<?php endif; ?>
