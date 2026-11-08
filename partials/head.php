@@ -112,6 +112,9 @@ $schema = [
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  // Consentimiento: todo negado hasta que la persona acepta (se recuerda en este navegador).
+  gtag('consent', 'default', { analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', wait_for_update: 500 });
+  try { if (localStorage.getItem('zest_cookies') === 'granted') gtag('consent', 'update', { analytics_storage: 'granted', ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted' }); } catch (e) {}
   gtag('js', new Date());
 <?php foreach ($gtagIds as $gid): ?>
   gtag('config', '<?= e($gid) ?>');
@@ -129,6 +132,8 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
+var ck; try { ck = localStorage.getItem('zest_cookies'); } catch (e) {}
+fbq('consent', ck === 'granted' ? 'grant' : 'revoke');
 fbq('init', '<?= e($site['pixel_id']) ?>');
 fbq('track', 'PageView');
 </script>

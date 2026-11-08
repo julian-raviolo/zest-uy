@@ -502,7 +502,7 @@ html:not(.js) .art .a-draw { stroke-dashoffset: 0; }
 .footer__row { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 28px; margin-top: 40px; padding-top: 24px; box-shadow: inset 0 1px 0 var(--line); }
 .footer__claim { font-size: 15px; margin-right: auto; }
 .footer__nav { display: flex; flex-wrap: wrap; gap: 6px 20px; font-size: 15px; }
-.footer__meta { display: flex; justify-content: space-between; gap: 16px; margin-top: 24px; font-family: var(--f-mono); font-size: 12px; color: #8F8B80; }
+.footer__meta { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; margin-top: 24px; font-family: var(--f-mono); font-size: 12px; color: #8F8B80; }
 @media (hover: hover) and (pointer: fine) {
   .footer__mail:hover { color: var(--orange); -webkit-text-stroke-color: var(--orange); }
   .footer__nav a:hover { color: var(--white); }
@@ -554,3 +554,14 @@ html:not(.js) .art .a-draw { stroke-dashoffset: 0; }
   .js [data-reveal] .ico .d { stroke-dashoffset: 0; }
   .art .a-travel { display: none; }
 }
+
+/* Aviso de cookies */
+.cookies { position: fixed; z-index: 70; left: 12px; right: 12px; bottom: max(12px, env(safe-area-inset-bottom)); max-width: 440px; padding: 18px; border-radius: 18px; background: var(--card-2); color: var(--beige); box-shadow: inset 0 0 0 1px var(--line-2), 0 18px 50px rgba(0, 0, 0, .55); display: grid; gap: 10px; }
+.cookies[hidden] { display: none; }
+.cookies__title { margin: 0; font-family: var(--f-display); font-stretch: 108%; font-weight: 700; font-size: 18px; color: var(--white); letter-spacing: -.02em; }
+.cookies__text { margin: 0; font-size: 14px; line-height: 1.5; }
+.cookies__btns { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+@media (min-width: 700px) { .cookies { left: auto; right: 20px; bottom: 20px; } }
+.footer__cookies { font: inherit; font-size: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; opacity: .8; }
+.footer__cookies:hover { opacity: 1; }
+.footer__cookies:focus-visible { outline: 2px solid var(--orange); outline-offset: 3px; }
