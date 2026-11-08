@@ -22,5 +22,6 @@
 </footer>
 
 <script src="<?= e(asset('js/main.js')) ?>" defer></script>
+<script src="<?= e(asset('js/eventos.js')) ?>" defer></script>
 </body>
 </html>

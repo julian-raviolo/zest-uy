@@ -57,9 +57,10 @@ $msg    = $messages[$formStatus] ?? null;
 <script>
   // Formulario enviado: avisa a Meta y a Google (una sola vez por envío, aunque se recargue la página).
   (function () {
-    try { if (sessionStorage.getItem('zest_lead')) return; sessionStorage.setItem('zest_lead', '1'); } catch (e) {}
-    if (window.fbq) fbq('track', 'Lead');
-    if (window.gtag) gtag('event', 'generate_lead');
+    var servicios = '';
+    try { if (sessionStorage.getItem('zest_lead')) return; sessionStorage.setItem('zest_lead', '1'); servicios = sessionStorage.getItem('zest_servicios') || ''; } catch (e) {}
+    if (window.fbq) fbq('track', 'Lead', servicios ? { content_name: servicios } : {});
+    if (window.gtag) gtag('event', 'generate_lead', servicios ? { servicios: servicios } : {});
   })();
 </script>
 <?php endif; ?>
