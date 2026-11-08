@@ -105,6 +105,15 @@ $schema = [
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..900&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="<?= e(asset('css/styles.css')) ?>">
+<?php if (!empty($site['ga_id'])): ?>
+<script async src="https://www.googletagmanager.com/gtag/js?id=<?= e($site['ga_id']) ?>"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '<?= e($site['ga_id']) ?>');
+</script>
+<?php endif; ?>
 
 <script type="application/ld+json">
 <?= json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_PRETTY_PRINT) ?>
