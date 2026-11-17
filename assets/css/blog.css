@@ -250,3 +250,24 @@
 .toc li.is-active::before { color: var(--white); }
 .toc__bar { height: 3px; border-radius: 99px; background: var(--card-2); overflow: hidden; }
 .toc__bar i { display: block; height: 100%; width: 0; background: var(--orange); transition: width .15s linear; }
+
+/* ---- Piezas extra (artículos nuevos) ---- */
+.serp { padding: 18px 20px; border-radius: 14px; background: #fff; color: #202124; display: grid; gap: 3px; box-shadow: none; max-width: 560px; margin-inline: auto; }
+.serp small { color: #4d5156; font-size: 13px; }
+.serp b { color: #1a0dab; font-weight: 500; font-size: 20px; line-height: 1.25; }
+.serp span { color: #4d5156; font-size: 14px; line-height: 1.5; }
+.serp i { display: inline-grid; place-items: center; width: 20px; height: 20px; margin-right: 8px; border-radius: 50%; background: var(--orange); color: #0B0B0A; font: 500 11px/1 var(--f-mono); font-style: normal; vertical-align: 2px; }
+.convos { display: grid; gap: 8px; }
+.convos div { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 14px; border-radius: 12px; background: var(--card-2); font-size: 15px; }
+.convos em { font-style: normal; font: 500 11px/1 var(--f-mono); letter-spacing: .06em; text-transform: uppercase; padding: 6px 10px; border-radius: 99px; background: rgba(255, 91, 46, .18); color: var(--orange); white-space: nowrap; }
+.convos em.g { background: rgba(120, 200, 120, .16); color: #8fd28f; }
+.convos em.y { background: rgba(240, 190, 80, .16); color: #f0be50; }
+.cols3 { display: grid; gap: 12px; }
+@media (min-width: 640px) { .cols3 { grid-template-columns: repeat(3, 1fr); } }
+.cols3 div { padding: 16px; border-radius: 14px; background: var(--card-2); box-shadow: inset 0 0 0 1px var(--line); font-size: 14px; line-height: 1.5; }
+.cols3 h4 { margin: 0 0 8px; font: 500 12px/1 var(--f-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--orange); }
+.cols3 ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+.cols3 li { padding-left: 14px; position: relative; }
+.cols3 li::before { content: "•"; position: absolute; left: 0; color: var(--beige-dim); }
+.stats--2 { grid-template-columns: 1fr 1fr !important; }
+.lines { width: 100%; height: auto; display: block; }
