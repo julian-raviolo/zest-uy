@@ -109,7 +109,6 @@
 @media (min-width: 1000px) {
   .art__grid { grid-template-columns: 260px minmax(0, 720px); justify-content: center; gap: 64px; }
   .toc { order: -1; }
-  .toc__box { position: sticky; top: calc(var(--header) + 24px); }
 }
 .toc__box { display: flex; flex-direction: column; gap: 14px; padding: 20px; border-radius: 18px; background: var(--card); box-shadow: inset 0 0 0 1px var(--line); }
 .toc ol { margin: 0; padding: 0; list-style: none; counter-reset: t; display: grid; gap: 10px; }
@@ -160,6 +159,7 @@
 
 .prose a.btn { color: var(--ink); text-decoration: none; }
 .toc { align-self: start; }
+@media (min-width: 1000px) { .toc { position: sticky; top: calc(var(--header) + 24px); max-height: calc(100vh - var(--header) - 48px); overflow: auto; } }
 .art__tag { justify-self: start; }
 .art__title { font-size: clamp(32px, 4.6vw, 52px); }
 
@@ -179,17 +179,14 @@
 .fig figcaption, .fig__cap { margin-top: 12px; font-family: var(--f-mono); font-size: 12px; letter-spacing: .04em; color: var(--beige-dim); opacity: .85; }
 .fig__title { margin: 0 0 18px; font-family: var(--f-display); font-stretch: 106%; font-weight: 700; font-size: 18px; color: var(--white); letter-spacing: -.01em; }
 
-/* Recorrido en pasos */
-.flow { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; counter-reset: f; }
-.flow li { position: relative; display: flex; gap: 14px; align-items: flex-start; padding: 14px 16px; border-radius: 14px; background: var(--card-2); counter-increment: f; font-size: 15px; line-height: 1.45; }
-.flow li::before { content: counter(f); flex: none; width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; background: var(--orange); color: var(--ink); font-family: var(--f-mono); font-weight: 500; font-size: 13px; }
-.flow li strong { display: block; font-size: 16px; }
-@media (min-width: 720px) {
-  .flow { grid-template-columns: repeat(5, 1fr); gap: 10px; }
-  .flow li { flex-direction: column; gap: 10px; padding: 16px 14px; }
-  .flow li:not(:last-child)::after { content: ""; position: absolute; right: -9px; top: 29px; width: 8px; height: 8px; border-top: 1.6px solid var(--orange); border-right: 1.6px solid var(--orange); transform: rotate(45deg); }
-}
-
+/* Recorrido en pasos (vertical, con línea que une los pasos) */
+.flow { list-style: none; padding: 0; margin: 0; display: grid; gap: 0; counter-reset: f; }
+.flow li { position: relative; display: grid; grid-template-columns: 36px 1fr; column-gap: 18px; padding: 0 0 24px; counter-increment: f; font-size: 15px; line-height: 1.5; }
+.flow li:last-child { padding-bottom: 0; }
+.flow li::before { content: counter(f); width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; background: var(--orange); color: var(--ink); font-family: var(--f-mono); font-weight: 500; font-size: 14px; }
+.flow li:not(:last-child)::after { content: ""; position: absolute; left: 17px; top: 42px; bottom: 6px; width: 2px; border-radius: 2px; background: linear-gradient(var(--orange), rgba(255, 91, 46, .18)); }
+.flow li > span { display: block; padding-top: 6px; }
+.flow li strong { display: block; margin-bottom: 2px; font-size: 17px; color: var(--white); font-weight: 600; }
 /* Barras (embudo) */
 .bars { display: grid; gap: 14px; }
 .bars__row { display: grid; gap: 6px; }
@@ -232,11 +229,6 @@
 .week .on b { color: var(--ink); }
 .week .off { opacity: .5; }
 @media (max-width: 520px) { .week { grid-template-columns: repeat(4, 1fr); } .week div { font-size: 11px; } }
-.flow--4 { }
-@media (min-width: 720px) { .flow--4 { grid-template-columns: repeat(4, 1fr); } }
-.flow--list { grid-template-columns: 1fr !important; }
-.flow--list li { flex-direction: row !important; align-items: center; }
-.flow--list li::after { display: none !important; }
 .checks { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
 .checks li { position: relative; padding: 12px 16px 12px 46px; border-radius: 12px; background: var(--card-2); font-size: 15px; line-height: 1.45; }
 .checks li::before { content: ""; position: absolute; left: 16px; top: 14px; width: 18px; height: 18px; border-radius: 50%; box-shadow: inset 0 0 0 1.6px var(--orange); }
@@ -250,3 +242,11 @@
 .cmp li { position: relative; padding-left: 18px; }
 .cmp li::before { content: "•"; position: absolute; left: 4px; color: var(--beige-dim); }
 .cmp__col--si li::before { color: var(--orange); }
+
+/* Índice: sección activa y progreso de lectura */
+.toc li { position: relative; }
+.toc a { display: block; padding: 4px 8px; margin: -4px -8px; border-radius: 8px; transition: color .2s, background-color .2s; }
+.toc a.is-active { color: var(--white); background: rgba(255, 91, 46, .14); box-shadow: inset 2px 0 0 var(--orange); }
+.toc li.is-active::before { color: var(--white); }
+.toc__bar { height: 3px; border-radius: 99px; background: var(--card-2); overflow: hidden; }
+.toc__bar i { display: block; height: 100%; width: 0; background: var(--orange); transition: width .15s linear; }

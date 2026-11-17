@@ -22,6 +22,9 @@ if (!$post) {
 
 $serv = zest_blog_service($config, $post['servicio']);
 [$cuerpo, $toc] = zest_blog_toc($post['cuerpo']);
+if (!empty($post['faq'])) {
+    $toc[] = ['id' => 'preguntas-frecuentes', 'txt' => 'Preguntas frecuentes'];
+}
 $relacionados = array_slice(array_values(array_filter(
     zest_blog_posts(),
     static fn ($p) => $p['slug'] !== $post['slug']
@@ -88,6 +91,7 @@ require dirname(__DIR__) . '/partials/blog-top.php';
       <aside class="toc" aria-label="Contenido del artículo">
         <div class="toc__box">
           <span class="label">En este artículo</span>
+          <div class="toc__bar" aria-hidden="true"><i data-progress></i></div>
           <ol>
             <?php foreach ($toc as $t): ?><li><a href="blog/<?= e($post['slug']) ?>/#<?= e($t['id']) ?>"><?= e($t['txt']) ?></a></li><?php endforeach; ?>
           </ol>
