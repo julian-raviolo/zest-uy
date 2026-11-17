@@ -30,7 +30,7 @@ function zest_blog_posts(): array
         $posts[] = $p;
     }
 
-    usort($posts, static fn ($a, $b) => strcmp($b['fecha'], $a['fecha']));
+    usort($posts, static fn ($a, $b) => strcmp($b['fecha'], $a['fecha']) ?: (($a['orden'] ?? 99) <=> ($b['orden'] ?? 99)));
     return $posts;
 }
 

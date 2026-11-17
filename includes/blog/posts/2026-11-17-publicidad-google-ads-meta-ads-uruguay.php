@@ -3,6 +3,7 @@
 return [
     'slug'        => 'publicidad-google-ads-meta-ads-uruguay',
     'estado'      => 'revisado',
+    'orden'       => 1, // desempate cuando varios salen el mismo día
     'fecha'       => '2026-11-17',
     'servicio'    => 'ads',
     'cover'       => 'bars',

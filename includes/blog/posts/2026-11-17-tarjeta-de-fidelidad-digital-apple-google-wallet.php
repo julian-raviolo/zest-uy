@@ -3,7 +3,8 @@
 return [
     'slug'        => 'tarjeta-de-fidelidad-digital-apple-google-wallet',
     'estado'      => 'revisado',
-    'fecha'       => '2026-12-15',
+    'orden'       => 5, // desempate cuando varios salen el mismo día
+    'fecha'       => '2026-11-17',
     'servicio'    => 'wallet',
     'cover'       => 'wallet',
     'minutos'     => 7,

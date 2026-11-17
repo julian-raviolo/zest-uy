@@ -3,7 +3,8 @@
 return [
     'slug'        => 'branding-identidad-de-marca-que-incluye',
     'estado'      => 'revisado',
-    'fecha'       => '2026-12-01',
+    'orden'       => 3, // desempate cuando varios salen el mismo día
+    'fecha'       => '2026-11-17',
     'servicio'    => 'branding',
     'cover'       => 'brand',
     'minutos'     => 8,

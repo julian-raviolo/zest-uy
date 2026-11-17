@@ -3,7 +3,8 @@
 return [
     'slug'        => 'redes-sociales-negocios-calendario-contenidos',
     'estado'      => 'revisado',
-    'fecha'       => '2026-11-24',
+    'orden'       => 2, // desempate cuando varios salen el mismo día
+    'fecha'       => '2026-11-17',
     'servicio'    => 'redes',
     'cover'       => 'calendar',
     'minutos'     => 8,

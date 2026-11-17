@@ -3,7 +3,8 @@
 return [
     'slug'        => 'pagina-web-que-genera-consultas',
     'estado'      => 'revisado',
-    'fecha'       => '2026-12-08',
+    'orden'       => 4, // desempate cuando varios salen el mismo día
+    'fecha'       => '2026-11-17',
     'servicio'    => 'web',
     'cover'       => 'web',
     'minutos'     => 8,
