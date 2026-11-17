@@ -82,7 +82,19 @@ require dirname(__DIR__) . '/partials/blog-top.php';
       </div>
     </header>
 
-    <div class="wrap art__coverwrap">
+    <div class="wrap art__grid">
+      <?php if (count($toc) > 2): ?>
+      <aside class="toc" aria-label="Contenido del artículo">
+        <div class="toc__box">
+          <span class="label">En este artículo</span>
+          <ol>
+            <?php foreach ($toc as $t): ?><li><a href="blog/<?= e($post['slug']) ?>/#<?= e($t['id']) ?>"><?= e($t['txt']) ?></a></li><?php endforeach; ?>
+          </ol>
+        </div>
+      </aside>
+      <?php endif; ?>
+
+      <div class="prose">
       <div class="art__cover" role="img" aria-label="Ilustración: <?= e($serv['pick']) ?>">
         <svg class="cover" viewBox="0 0 840 360" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
           <g fill="none" stroke="#F2EFE6" stroke-opacity=".9" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
@@ -98,21 +110,7 @@ require dirname(__DIR__) . '/partials/blog-top.php';
           <text x="618" y="130" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="800" font-size="30" fill="#FF5B2E">+</text>
         </svg>
       </div>
-    </div>
 
-    <div class="wrap art__grid">
-      <?php if (count($toc) > 2): ?>
-      <aside class="toc" aria-label="Contenido del artículo">
-        <div class="toc__box">
-          <span class="label">En este artículo</span>
-          <ol>
-            <?php foreach ($toc as $t): ?><li><a href="blog/<?= e($post['slug']) ?>/#<?= e($t['id']) ?>"><?= e($t['txt']) ?></a></li><?php endforeach; ?>
-          </ol>
-        </div>
-      </aside>
-      <?php endif; ?>
-
-      <div class="prose">
         <?= $cuerpo /* HTML propio del sitio, escrito y revisado por el equipo */ ?>
 
         <?php if (!empty($post['faq'])): ?>
