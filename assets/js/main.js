@@ -27,7 +27,7 @@
   onScroll();
 
   /* Link activo según la sección visible */
-  const links = [...document.querySelectorAll('.nav a')];
+  const links = [...document.querySelectorAll('.nav a[href^="#"]')];
   if ('IntersectionObserver' in window && links.length) {
     const spy = new IntersectionObserver((entries) => {
       entries.forEach((e) => {

@@ -8,6 +8,7 @@
       <a href="#servicios">Servicios</a>
       <a href="#proceso">Proceso</a>
       <a href="#preguntas">Preguntas</a>
+      <a href="blog/">Blog</a>
     </nav>
     <a class="btn btn--sm" href="#contacto">Contacto</a>
   </div>

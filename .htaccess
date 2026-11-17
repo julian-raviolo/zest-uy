@@ -20,6 +20,9 @@ RedirectMatch 404 /\.git(/|$)
   # /index.php -> /
   RewriteCond %{THE_REQUEST} \s/index\.php[\s?] [NC]
   RewriteRule ^index\.php$ / [L,R=301]
+
+  # Blog: /blog/<articulo>/ -> blog/articulo.php (solo afecta a /blog/)
+  RewriteRule ^blog/([a-z0-9-]+)/?$ blog/articulo.php?slug=$1 [L,QSA]
 </IfModule>
 
 # Compresión

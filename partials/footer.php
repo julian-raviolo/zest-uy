@@ -12,6 +12,7 @@
         <a href="#servicios">Servicios</a>
         <a href="#proceso">Proceso</a>
         <a href="#preguntas">Preguntas</a>
+        <a href="blog/">Blog</a>
         <a href="#contacto">Contacto</a>
       </nav>
     </div>
