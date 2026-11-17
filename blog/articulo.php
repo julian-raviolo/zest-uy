@@ -82,6 +82,24 @@ require dirname(__DIR__) . '/partials/blog-top.php';
       </div>
     </header>
 
+    <div class="wrap art__coverwrap">
+      <div class="art__cover" role="img" aria-label="Ilustración: <?= e($serv['pick']) ?>">
+        <svg class="cover" viewBox="0 0 840 360" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <g fill="none" stroke="#F2EFE6" stroke-opacity=".9" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M120 300h600" stroke-opacity=".35"/>
+            <rect x="170" y="210" width="64" height="90" rx="8" fill="#FF5B2E" fill-opacity=".25" stroke="#FF5B2E"/>
+            <rect x="274" y="170" width="64" height="130" rx="8" fill="#FF5B2E" fill-opacity=".35" stroke="#FF5B2E"/>
+            <rect x="378" y="125" width="64" height="175" rx="8" fill="#FF5B2E" fill-opacity=".5" stroke="#FF5B2E"/>
+            <rect x="482" y="80" width="64" height="220" rx="8" fill="#FF5B2E" stroke="#FF5B2E"/>
+            <path d="M150 190l124-52 104 22 168-86" stroke-width="3"/>
+            <path d="M510 78h40v40"/>
+          </g>
+          <circle cx="618" cy="120" r="46" fill="#151513" stroke="#F2EFE6" stroke-opacity=".25"/>
+          <text x="618" y="130" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="800" font-size="30" fill="#FF5B2E">+</text>
+        </svg>
+      </div>
+    </div>
+
     <div class="wrap art__grid">
       <?php if (count($toc) > 2): ?>
       <aside class="toc" aria-label="Contenido del artículo">
