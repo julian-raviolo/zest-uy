@@ -3,7 +3,7 @@
 return [
     'slug'        => 'instagram-para-negocios-perfil-que-convierte',
     'estado'      => 'revisado',
-    'fecha'       => '2026-12-22',
+    'fecha'       => '2026-12-02',
     'servicio'    => 'redes',
     'cover'       => 'profile',
     'minutos'     => 9,

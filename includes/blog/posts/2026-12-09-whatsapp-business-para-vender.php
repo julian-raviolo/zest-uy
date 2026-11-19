@@ -3,7 +3,7 @@
 return [
     'slug'        => 'whatsapp-business-para-vender',
     'estado'      => 'revisado',
-    'fecha'       => '2027-01-05',
+    'fecha'       => '2026-12-09',
     'servicio'    => 'ventas',
     'cover'       => 'chat',
     'minutos'     => 9,

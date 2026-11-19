@@ -3,7 +3,7 @@
 return [
     'slug'        => 'plan-de-marketing-digital-90-dias-pymes',
     'estado'      => 'revisado',
-    'fecha'       => '2027-01-19',
+    'fecha'       => '2026-12-16',
     'servicio'    => 'consultoria',
     'cover'       => 'timeline',
     'minutos'     => 10,

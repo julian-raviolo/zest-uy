@@ -3,7 +3,7 @@
 return [
     'slug'        => 'seo-para-negocios-en-uruguay-guia',
     'estado'      => 'revisado',
-    'fecha'       => '2026-11-24',
+    'fecha'       => '2026-11-19',
     'servicio'    => 'web',
     'cover'       => 'search',
     'minutos'     => 9,

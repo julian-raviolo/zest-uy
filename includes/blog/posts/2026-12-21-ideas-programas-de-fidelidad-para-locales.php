@@ -3,7 +3,7 @@
 return [
     'slug'        => 'ideas-programas-de-fidelidad-para-locales',
     'estado'      => 'revisado',
-    'fecha'       => '2027-01-26',
+    'fecha'       => '2026-12-21',
     'servicio'    => 'wallet',
     'cover'       => 'cards',
     'minutos'     => 9,

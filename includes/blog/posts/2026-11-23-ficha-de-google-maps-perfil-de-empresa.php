@@ -3,7 +3,7 @@
 return [
     'slug'        => 'ficha-de-google-maps-perfil-de-empresa',
     'estado'      => 'revisado',
-    'fecha'       => '2026-12-01',
+    'fecha'       => '2026-11-23',
     'servicio'    => 'web',
     'cover'       => 'map',
     'minutos'     => 9,

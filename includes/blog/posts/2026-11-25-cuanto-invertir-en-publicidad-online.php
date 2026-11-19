@@ -3,7 +3,7 @@
 return [
     'slug'        => 'cuanto-invertir-en-publicidad-online',
     'estado'      => 'revisado',
-    'fecha'       => '2026-12-08',
+    'fecha'       => '2026-11-25',
     'servicio'    => 'ads',
     'cover'       => 'coins',
     'minutos'     => 9,

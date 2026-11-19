@@ -3,7 +3,7 @@
 return [
     'slug'        => 'medir-campanas-pixel-conversiones-analytics',
     'estado'      => 'revisado',
-    'fecha'       => '2026-12-15',
+    'fecha'       => '2026-11-30',
     'servicio'    => 'ads',
     'cover'       => 'dash',
     'minutos'     => 9,
