@@ -26,6 +26,8 @@ return [
         'instagram'      => 'zest_uy',                  // usuario sin @
         'linkedin'       => '',                         // opcional: URL completa de la página de empresa
         'city'           => 'Uruguay',
+        'whatsapp'       => '59899433506',              // celular con código de país, solo números (099 433 506)
+        'whatsapp_text'  => 'Hola, vi la web de Zest y quiero hacer una consulta.',
     ],
 
     // Envío del formulario

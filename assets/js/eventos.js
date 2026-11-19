@@ -31,6 +31,7 @@
     // Email y Instagram
     if (a.tagName === 'A') {
       if (a.href.startsWith('mailto:')) { ga('click_email'); fb('track', 'Contact'); }
+      if (a.hasAttribute('data-wa')) { ga('click_whatsapp', { page: location.pathname }); fb('track', 'Contact', { content_name: 'whatsapp' }); }
       if (a.href.includes('instagram.com/')) ga('click_instagram', { link_url: a.href });
     }
   });

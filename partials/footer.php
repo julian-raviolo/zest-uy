@@ -24,6 +24,7 @@
 </footer>
 
 <?php require __DIR__ . '/cookies.php'; ?>
+<?php require __DIR__ . '/whatsapp.php'; ?>
 
 <script src="<?= e(asset('js/main.js')) ?>" defer></script>
 <script src="<?= e(asset('js/cookies.js')) ?>" defer></script>

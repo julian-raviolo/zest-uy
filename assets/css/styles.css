@@ -567,3 +567,19 @@ html:not(.js) .art .a-draw { stroke-dashoffset: 0; }
 .footer__cookies:focus-visible { outline: 2px solid var(--orange); outline-offset: 3px; }
 
 .cookies__text a { color: var(--orange); text-decoration: underline; text-underline-offset: 3px; }
+
+/* Botón flotante de WhatsApp */
+.wa {
+  position: fixed; z-index: 60; right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom));
+  display: inline-flex; align-items: center; gap: 10px; height: 56px; min-width: 56px; padding: 0 16px; justify-content: center;
+  border-radius: 999px; background: #25D366; color: #fff; font-weight: 600; font-size: 15px;
+  box-shadow: 0 12px 30px -10px rgba(0, 0, 0, .6), 0 0 0 1px rgba(255, 255, 255, .12) inset;
+  transition: transform .2s var(--ease), box-shadow .3s, opacity .2s;
+}
+.wa svg { width: 28px; height: 28px; flex: none; }
+.wa__txt { display: none; }
+.wa:active { transform: scale(.95); }
+@media (min-width: 900px) { .wa { right: 28px; bottom: 28px; padding: 0 22px 0 18px; } .wa__txt { display: inline; } }
+@media (hover: hover) and (pointer: fine) { .wa:hover { transform: translateY(-2px) scale(1.03); box-shadow: 0 18px 36px -10px rgba(37, 211, 102, .55); } }
+/* En celular, mientras el aviso de cookies está abierto, el botón no se le superpone */
+@media (max-width: 700px) { .cookies:not([hidden]) ~ .wa { opacity: 0; pointer-events: none; } }

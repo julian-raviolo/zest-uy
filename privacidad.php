@@ -88,6 +88,7 @@ $base    = rtrim($site['url'], '/');
   </div>
 </main>
 <?php require __DIR__ . '/partials/cookies.php'; ?>
+<?php require __DIR__ . '/partials/whatsapp.php'; ?>
 <script src="<?= e(asset('js/cookies.js')) ?>" defer></script>
 <script src="<?= e(asset('js/eventos.js')) ?>" defer></script>
 <div style="padding:0 var(--gut) 32px;text-align:center;font:12px var(--f-mono);color:#8F8B80">
