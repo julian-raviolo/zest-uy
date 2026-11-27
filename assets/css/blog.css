@@ -271,3 +271,6 @@
 .cols3 li::before { content: "•"; position: absolute; left: 0; color: var(--beige-dim); }
 .stats--2 { grid-template-columns: 1fr 1fr !important; }
 .lines { width: 100%; height: auto; display: block; }
+
+.acta__btns { display: flex; flex-wrap: wrap; gap: 10px; }
+.prose a.btn--ghost { color: var(--white); }

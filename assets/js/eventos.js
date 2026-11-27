@@ -26,6 +26,11 @@
       ga('click', { link_url: a.href, link_text: clean(a.textContent), outbound: true });
       fb('trackCustom', 'WalletClick');
     }
+    // Desde el blog hacia la landing de Zest Wallet
+    if (a.hasAttribute && a.hasAttribute('data-landing')) {
+      ga('click_landing_wallet', { origen: 'blog', page: location.pathname });
+      fb('trackCustom', 'WalletClick');
+    }
     // Botón "Contacto" del menú
     if (a.matches('header a.btn[href="#contacto"]')) ga('clic_contacto_menu');
     // Email y Instagram

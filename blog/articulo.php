@@ -22,6 +22,20 @@ if (!$post) {
 
 $serv = zest_blog_service($config, $post['servicio']);
 [$cuerpo, $toc] = zest_blog_toc($post['cuerpo']);
+
+// Posts de tarjetas de fidelización: llevan a la landing de Zest Wallet (con marca UTM para medir de qué artículo llega cada visita).
+$landing    = !empty($post['landing']);
+$landingUrl = 'https://wallet.zest.uy/?utm_source=zest.uy&utm_medium=blog&utm_campaign=' . rawurlencode($post['slug']);
+if ($landing) {
+    // la mención suelta "wallet.zest.uy" pasa a ser un enlace
+    $cuerpo = preg_replace('~(?<![/\w.>])wallet\.zest\.uy~', '<a href="' . e($landingUrl) . '" data-landing target="_blank" rel="noopener">wallet.zest.uy</a>', $cuerpo);
+    // un cuadro corto antes del segundo apartado, para quien no llega al final
+    $aviso = '<div class="callout"><strong>Zest Wallet</strong>Armá tu tarjeta de fidelización digital con tu marca, para Apple Wallet y Google Wallet. <a href="' . e($landingUrl) . '" data-landing target="_blank" rel="noopener">Mirá cómo funciona</a>.</div>';
+    $partes = preg_split('/(?=<h2\b)/', $cuerpo, 3);
+    if (count($partes) === 3) {
+        $cuerpo = $partes[0] . $partes[1] . $aviso . "\n" . $partes[2];
+    }
+}
 if (!empty($post['faq'])) {
     $toc[] = ['id' => 'preguntas-frecuentes', 'txt' => 'Preguntas frecuentes'];
 }
@@ -115,12 +129,24 @@ require dirname(__DIR__) . '/partials/blog-top.php';
           </div>
         <?php endif; ?>
 
+        <?php if ($landing): ?>
+        <aside class="acta">
+          <span class="label"><span>●</span> Zest Wallet</span>
+          <h3>Mirá cómo quedaría la tarjeta de tu negocio</h3>
+          <p>Diseñala con tu marca, elegí sellos, puntos o cashback y tus clientes la guardan en Apple Wallet o Google Wallet, sin instalar nada.</p>
+          <div class="acta__btns">
+            <a class="btn" href="<?= e($landingUrl) ?>" data-landing target="_blank" rel="noopener">Ver cómo funciona Zest Wallet <?= ico('arrow', 'btn__ico') ?></a>
+            <a class="btn btn--ghost" href="/#contacto">Hablar con Zest</a>
+          </div>
+        </aside>
+        <?php else: ?>
         <aside class="acta">
           <span class="label"><span>●</span> <?= e($serv['pick']) ?></span>
           <h3><?= e($serv['short']) ?></h3>
           <p><?= e($serv['text']) ?></p>
           <a class="btn" href="/#contacto">Quiero hablar con Zest <?= ico('arrow', 'btn__ico') ?></a>
         </aside>
+        <?php endif; ?>
       </div>
     </div>
   </article>

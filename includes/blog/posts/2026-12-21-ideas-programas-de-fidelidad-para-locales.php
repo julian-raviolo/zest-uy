@@ -5,6 +5,7 @@ return [
     'estado'      => 'revisado',
     'fecha'       => '2026-12-21',
     'servicio'    => 'wallet',
+    'landing'     => true, // lleva a la landing de Zest Wallet
     'cover'       => 'cards',
     'minutos'     => 9,
     'titulo'      => '8 ideas de programas de fidelidad para locales: sellos, puntos y beneficios que funcionan',

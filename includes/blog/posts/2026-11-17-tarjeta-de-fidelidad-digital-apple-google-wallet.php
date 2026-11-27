@@ -6,6 +6,7 @@ return [
     'orden'       => 5, // desempate cuando varios salen el mismo día
     'fecha'       => '2026-11-17',
     'servicio'    => 'wallet',
+    'landing'     => true, // lleva a la landing de Zest Wallet
     'cover'       => 'wallet',
     'minutos'     => 7,
     'titulo'      => 'Tarjeta de fidelidad en Apple Wallet y Google Wallet: cómo hacer que tus clientes vuelvan',
