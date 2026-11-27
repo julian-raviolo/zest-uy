@@ -274,3 +274,19 @@
 
 .acta__btns { display: flex; flex-wrap: wrap; gap: 10px; }
 .prose a.btn--ghost { color: var(--white); }
+
+/* Tarjeta de ejemplo y matriz */
+.lcard { max-width: 380px; margin-inline: auto; padding: 22px; border-radius: 22px; background: var(--orange); color: #0B0B0A; display: grid; gap: 16px; }
+.lcard__top { display: flex; align-items: center; gap: 12px; }
+.lcard__logo { width: 38px; height: 38px; border-radius: 50%; background: #0B0B0A; display: grid; place-items: center; color: var(--orange); font: 800 17px/1 var(--f-display); }
+.lcard__name { font: 700 18px/1.1 var(--f-display); letter-spacing: -.02em; }
+.lcard__name small { display: block; font: 500 11px/1.3 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; opacity: .7; margin-top: 3px; }
+.lcard__stamps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+.lcard__stamps i { aspect-ratio: 1; border-radius: 50%; background: #0B0B0A; display: block; }
+.lcard__stamps i.off { background: none; box-shadow: inset 0 0 0 2.5px rgba(11, 11, 10, .5); }
+.lcard__foot { display: flex; justify-content: space-between; font: 500 12px/1 var(--f-mono); letter-spacing: .06em; text-transform: uppercase; }
+.matrix { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.matrix div { padding: 14px 16px; border-radius: 14px; background: var(--card-2); box-shadow: inset 0 0 0 1px var(--line); font-size: 14px; line-height: 1.45; }
+.matrix h4 { margin: 0 0 6px; font: 500 11px/1.3 var(--f-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--orange); }
+.matrix .best { box-shadow: inset 0 0 0 1.5px rgba(255, 91, 46, .7); }
+@media (max-width: 520px) { .matrix { grid-template-columns: 1fr; } }
