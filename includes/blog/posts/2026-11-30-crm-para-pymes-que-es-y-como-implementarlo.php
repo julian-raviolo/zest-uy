@@ -3,7 +3,8 @@
 return [
     'slug'        => 'crm-para-pymes-que-es-y-como-implementarlo',
     'estado'      => 'revisado',
-    'fecha'       => '2026-12-07',
+    'fecha'       => '2026-11-30',
+    'hora'        => '12:00',
     'servicio'    => 'ventas',
     'cover'       => 'kanban',
     'minutos'     => 9,

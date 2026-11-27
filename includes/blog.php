@@ -5,7 +5,7 @@ declare(strict_types=1);
  * Blog de Zest. Cada artículo es un archivo en includes/blog/posts/ que devuelve un array.
  *
  * Publicación automática con revisión previa: un artículo solo se ve cuando
- *   estado = 'revisado'  (lo aprueba una persona) Y  fecha <= hoy.
+ *   estado = 'revisado'  (lo aprueba una persona) Y  ya pasó su fecha y hora ('fecha' + 'hora', por defecto 12:00, hora de Uruguay).
  * Los 'borrador' nunca se muestran. Para verlos en una prueba local: ZEST_BLOG_PREVIEW=1.
  */
 function zest_blog_posts(): array
@@ -16,7 +16,8 @@ function zest_blog_posts(): array
     }
 
     $preview = getenv('ZEST_BLOG_PREVIEW') === '1';
-    $hoy     = (new DateTimeImmutable('today', new DateTimeZone('America/Montevideo')))->format('Y-m-d');
+    $tz      = new DateTimeZone('America/Montevideo');
+    $ahora   = new DateTimeImmutable(getenv('ZEST_BLOG_NOW') ?: 'now', $tz); // ZEST_BLOG_NOW solo para pruebas locales
     $posts   = [];
 
     foreach (glob(__DIR__ . '/blog/posts/*.php') ?: [] as $file) {
@@ -24,8 +25,11 @@ function zest_blog_posts(): array
         if (!is_array($p) || empty($p['slug'])) {
             continue;
         }
-        if (!$preview && (($p['estado'] ?? '') !== 'revisado' || ($p['fecha'] ?? '9999') > $hoy)) {
-            continue;
+        if (!$preview) {
+            $sale = new DateTimeImmutable(($p['fecha'] ?? '9999-12-31') . ' ' . ($p['hora'] ?? '12:00'), $tz);
+            if (($p['estado'] ?? '') !== 'revisado' || $sale > $ahora) {
+                continue;
+            }
         }
         $posts[] = $p;
     }

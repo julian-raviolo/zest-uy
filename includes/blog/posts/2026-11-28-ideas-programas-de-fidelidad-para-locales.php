@@ -3,7 +3,8 @@
 return [
     'slug'        => 'ideas-programas-de-fidelidad-para-locales',
     'estado'      => 'revisado',
-    'fecha'       => '2026-12-21',
+    'fecha'       => '2026-11-28',
+    'hora'        => '12:00',
     'servicio'    => 'wallet',
     'landing'     => true, // lleva a la landing de Zest Wallet
     'cover'       => 'cards',

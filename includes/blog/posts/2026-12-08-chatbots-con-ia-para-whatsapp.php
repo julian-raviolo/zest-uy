@@ -3,7 +3,8 @@
 return [
     'slug'        => 'chatbots-con-ia-para-whatsapp',
     'estado'      => 'revisado',
-    'fecha'       => '2026-12-14',
+    'fecha'       => '2026-12-08',
+    'hora'        => '12:00',
     'servicio'    => 'ia',
     'cover'       => 'bot',
     'minutos'     => 9,
