@@ -2,7 +2,7 @@
 // Post nuevo 12. Se publica solo cuando estado = 'revisado' y ya pasó su fecha y hora.
 return [
     'slug'        => 'cuanto-cuesta-un-programa-de-fidelizacion',
-    'estado'      => 'borrador', // pasa a 'revisado' cuando se da el OK
+    'estado'      => 'revisado',
     'fecha'       => '2026-12-17',
     'hora'        => '12:00',
     'servicio'    => 'wallet',

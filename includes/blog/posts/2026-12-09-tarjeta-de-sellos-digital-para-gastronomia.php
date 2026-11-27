@@ -2,7 +2,7 @@
 // Post nuevo 8. Se publica solo cuando estado = 'revisado' y ya pasó su fecha y hora.
 return [
     'slug'        => 'tarjeta-de-sellos-digital-para-gastronomia',
-    'estado'      => 'borrador', // pasa a 'revisado' cuando se da el OK
+    'estado'      => 'revisado',
     'fecha'       => '2026-12-09',
     'hora'        => '12:00',
     'servicio'    => 'wallet',

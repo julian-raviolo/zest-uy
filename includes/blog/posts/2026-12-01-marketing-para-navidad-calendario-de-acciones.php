@@ -2,7 +2,7 @@
 // Post nuevo 1. Se publica solo cuando estado = 'revisado' y ya pasó su fecha y hora.
 return [
     'slug'        => 'marketing-para-navidad-calendario-de-acciones',
-    'estado'      => 'borrador', // pasa a 'revisado' cuando se da el OK
+    'estado'      => 'revisado',
     'fecha'       => '2026-12-01',
     'hora'        => '12:00',
     'servicio'    => 'consultoria',

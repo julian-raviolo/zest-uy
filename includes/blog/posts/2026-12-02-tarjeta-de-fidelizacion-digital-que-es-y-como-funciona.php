@@ -2,7 +2,7 @@
 // Post nuevo 6. Se publica solo cuando estado = 'revisado' y ya pasó su fecha y hora.
 return [
     'slug'        => 'tarjeta-de-fidelizacion-digital-que-es-y-como-funciona',
-    'estado'      => 'borrador', // pasa a 'revisado' cuando se da el OK
+    'estado'      => 'revisado',
     'fecha'       => '2026-12-02',
     'hora'        => '12:00',
     'servicio'    => 'wallet',

@@ -2,7 +2,7 @@
 // Post nuevo 15. Se publica solo cuando estado = 'revisado' y ya pasó su fecha y hora.
 return [
     'slug'        => 'balance-de-fin-de-ano-y-plan-de-marketing-2027',
-    'estado'      => 'borrador', // pasa a 'revisado' cuando se da el OK
+    'estado'      => 'revisado',
     'fecha'       => '2026-12-18',
     'hora'        => '12:00',
     'servicio'    => 'consultoria',

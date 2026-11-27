@@ -2,7 +2,7 @@
 // Post nuevo 11. Se publica solo cuando estado = 'revisado' y ya pasó su fecha y hora.
 return [
     'slug'        => 'tarjeta-de-puntos-y-cashback-como-funcionan',
-    'estado'      => 'borrador', // pasa a 'revisado' cuando se da el OK
+    'estado'      => 'revisado',
     'fecha'       => '2026-12-15',
     'hora'        => '12:00',
     'servicio'    => 'wallet',

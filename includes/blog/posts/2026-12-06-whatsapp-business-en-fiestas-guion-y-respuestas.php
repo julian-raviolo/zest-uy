@@ -2,7 +2,7 @@
 // Post nuevo 4. Se publica solo cuando estado = 'revisado' y ya pasó su fecha y hora.
 return [
     'slug'        => 'whatsapp-business-en-fiestas-guion-y-respuestas',
-    'estado'      => 'borrador', // pasa a 'revisado' cuando se da el OK
+    'estado'      => 'revisado',
     'fecha'       => '2026-12-06',
     'hora'        => '12:00',
     'servicio'    => 'ventas',

@@ -2,7 +2,7 @@
 // Post nuevo 10. Se publica solo cuando estado = 'revisado' y ya pasó su fecha y hora.
 return [
     'slug'        => 'como-fidelizar-clientes-peluqueria-barberia-estetica',
-    'estado'      => 'borrador', // pasa a 'revisado' cuando se da el OK
+    'estado'      => 'revisado',
     'fecha'       => '2026-12-13',
     'hora'        => '12:00',
     'servicio'    => 'wallet',

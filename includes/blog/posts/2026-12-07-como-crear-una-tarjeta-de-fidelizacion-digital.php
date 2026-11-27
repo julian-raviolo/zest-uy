@@ -2,7 +2,7 @@
 // Post nuevo 7. Se publica solo cuando estado = 'revisado' y ya pasó su fecha y hora.
 return [
     'slug'        => 'como-crear-una-tarjeta-de-fidelizacion-digital',
-    'estado'      => 'borrador', // pasa a 'revisado' cuando se da el OK
+    'estado'      => 'revisado',
     'fecha'       => '2026-12-07',
     'hora'        => '12:00',
     'servicio'    => 'wallet',
